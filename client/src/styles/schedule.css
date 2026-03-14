@@ -1,0 +1,526 @@
+/* ======================================================
+   GLOBAL LAYOUT
+   ====================================================== */
+
+
+.schedulePage {
+
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+
+}
+
+.loading,
+.error {
+
+  padding: 20px;
+  text-align: center;
+
+}
+
+
+
+/* ======================================================
+   TOOLBAR
+   ====================================================== */
+
+.schedulerToolbar {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 16px;
+
+  border-bottom: 1px solid #ddd;
+
+  background: #fff;
+
+}
+
+.toolbarLeft,
+.toolbarCenter,
+.toolbarRight {
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.toolbarTitle {
+
+  font-weight: 600;
+
+}
+
+
+
+/* ======================================================
+   WEEK SCHEDULER GRID
+   ====================================================== */
+
+.weekScheduler {
+
+  display: grid;
+
+  grid-template-columns:
+    70px repeat(7, 1fr);
+
+  flex: 1;
+
+  position: relative;
+
+}
+
+
+
+/* ======================================================
+   TIME COLUMN
+   ====================================================== */
+
+.timeColumn {
+
+  border-right: 1px solid #ddd;
+
+}
+
+.timeCell {
+
+  height: 60px;
+
+  font-size: 11px;
+
+  border-bottom: 1px solid #eee;
+
+  padding-left: 6px;
+
+}
+
+
+
+/* ======================================================
+   DAY COLUMNS
+   ====================================================== */
+
+.dayColumn {
+
+  position: relative;
+
+  border-left: 1px solid #eee;
+
+}
+
+
+
+/* ======================================================
+   EVENT CARDS
+   ====================================================== */
+
+.eventCard {
+
+  position: absolute;
+
+  color: white;
+
+  padding: 6px;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.25);
+
+  transition:
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
+
+}
+
+.eventCard:hover {
+
+  transform: scale(1.02);
+
+  box-shadow:
+    0 6px 14px rgba(0,0,0,0.35);
+
+}
+
+.eventTime {
+
+  font-size: 11px;
+  opacity: 0.9;
+
+}
+
+.eventTitle {
+
+  font-weight: 600;
+
+}
+
+.eventMeta {
+
+  font-size: 11px;
+  opacity: 0.75;
+
+}
+
+
+
+/* ======================================================
+   CONFLICT EVENTS
+   ====================================================== */
+
+.eventConflict {
+
+  border: 2px solid red;
+
+  box-shadow:
+    0 0 8px rgba(255,0,0,0.7);
+
+}
+
+
+
+/* ======================================================
+   CURRENT TIME INDICATOR
+   ====================================================== */
+
+.nowLine {
+
+  position: absolute;
+
+  left: 70px;
+  right: 0;
+
+  height: 2px;
+
+  background: red;
+
+  z-index: 10;
+
+}
+
+.nowLine::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: -6px;
+
+  width: 10px;
+  height: 10px;
+
+  background: red;
+
+  border-radius: 50%;
+
+}
+
+
+
+/* ======================================================
+   AGENDA VIEW
+   ====================================================== */
+
+.agendaView {
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 10px;
+  gap: 10px;
+
+}
+
+.agendaDate {
+
+  font-weight: 600;
+
+  margin-top: 16px;
+
+  border-bottom: 1px solid #ddd;
+
+}
+
+.agendaItem {
+
+  display: flex;
+  gap: 12px;
+
+  padding: 8px;
+
+  border-radius: 8px;
+
+  background: rgba(0,0,0,0.04);
+
+}
+
+.agendaTime {
+
+  width: 60px;
+
+  font-weight: bold;
+
+}
+
+.agendaContent {
+
+  flex: 1;
+
+}
+
+
+
+/* ======================================================
+   MOBILE SCHEDULER
+   ====================================================== */
+
+.mobileScheduler {
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 10px;
+  gap: 8px;
+
+}
+
+.mobileDate {
+
+  font-weight: 600;
+
+  margin-top: 14px;
+
+  border-bottom: 1px solid #ddd;
+
+}
+
+.mobileEvent {
+
+  display: flex;
+  gap: 12px;
+
+  padding: 10px;
+
+  border-radius: 8px;
+
+  background: rgba(0,0,0,0.05);
+
+  cursor: pointer;
+
+}
+
+.mobileTime {
+
+  width: 60px;
+
+  font-weight: bold;
+
+}
+
+.mobileContent {
+
+  flex: 1;
+
+}
+
+.mobileTitle {
+
+  font-weight: 500;
+
+}
+
+.mobileMeta {
+
+  font-size: 12px;
+  opacity: 0.7;
+
+}
+
+
+
+/* ======================================================
+   RESOURCE VIEW
+   ====================================================== */
+
+.resourceScheduler {
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.resourceRow {
+
+  display: grid;
+
+  grid-template-columns: 150px 1fr;
+
+  border-bottom: 1px solid #eee;
+
+}
+
+.resourceLabel {
+
+  padding: 10px;
+
+  font-weight: 600;
+
+  border-right: 1px solid #ddd;
+
+  background: #f8fafc;
+
+}
+
+.resourceTimeline {
+
+  position: relative;
+
+  height: 600px;
+
+}
+
+.seasonHeatmap {
+
+  padding: 20px;
+
+}
+
+.heatmapGrid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(13, 1fr);
+
+  gap: 6px;
+
+}
+
+.heatCell {
+
+  height: 24px;
+
+  border-radius: 4px;
+
+}
+
+.productionTimeline {
+
+  padding: 20px;
+
+}
+
+.productionEvent {
+
+  display: grid;
+
+  grid-template-columns:
+    120px 80px 1fr 150px;
+
+  padding: 8px;
+
+  border-bottom: 1px solid #eee;
+
+}
+
+.productionDate {
+
+  font-weight: 600;
+
+}
+
+.productionTime {
+
+  color: #475569;
+
+}
+
+.productionTitle {
+
+  font-weight: 500;
+
+}
+
+.productionVenue {
+
+  color: #64748b;
+
+}
+
+.monthView {
+  padding: 16px;
+}
+
+.monthGrid {
+
+  display: grid;
+
+  grid-template-columns: repeat(7, 1fr);
+
+  gap: 6px;
+
+}
+
+.monthHeader {
+
+  font-weight: 600;
+
+  text-align: center;
+
+}
+
+.monthCell {
+
+  border: 1px solid #ddd;
+
+  min-height: 80px;
+
+  padding: 6px;
+
+  cursor: pointer;
+
+  border-radius: 6px;
+
+  background: #fafafa;
+
+}
+
+.monthCell:hover {
+
+  background: #f1f5f9;
+
+}
+
+.monthDate {
+
+  font-weight: 600;
+
+  font-size: 14px;
+
+}
+
+.monthEventCount {
+
+  margin-top: 6px;
+
+  font-size: 12px;
+
+  color: #475569;
+
+}
+
+.eventProduction {
+  font-size: 10px;
+  opacity: 0.8;
+}

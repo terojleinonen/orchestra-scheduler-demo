@@ -1,0 +1,1048 @@
+
+<opasExport generated="2026-01-01">
+  <season year="2026">
+    <productions>
+
+  <production id="P1">
+    <title>Mahler Symphony No.2</title>
+    <composer>Gustav Mahler</composer>
+    <conductor>Anna Virtanen</conductor>
+
+    <services>
+
+      <service id="S1">
+        <type>concert</type>
+        <date>2026-03-01</date>
+        <start>13:00</start>
+        <duration>120</duration>
+        <venue>Main Hall</venue>
+      </service>
+
+      <service id="S2">
+        <type>rehearsal</type>
+        <date>2026-03-02</date>
+        <start>13:00</start>
+        <duration>150</duration>
+        <venue>Main Hall</venue>
+      </service>
+
+      <service id="S3">
+        <type>sectional</type>
+        <section>strings</section>
+        <date>2026-03-02</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S4">
+        <type>sectional</type>
+        <section>brass</section>
+        <date>2026-03-02</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S5">
+        <type>rehearsal</type>
+        <date>2026-03-03</date>
+        <start>13:00</start>
+        <duration>150</duration>
+        <venue>Main Hall</venue>
+      </service>
+
+      <service id="S6">
+        <type>sectional</type>
+        <section>strings</section>
+        <date>2026-03-03</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S7">
+        <type>sectional</type>
+        <section>brass</section>
+        <date>2026-03-03</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S8">
+        <type>dress rehearsal</type>
+        <date>2026-03-04</date>
+        <start>19:00</start>
+        <duration>150</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S9">
+        <type>concert</type>
+        <date>2026-03-05</date>
+        <start>13:00</start>
+        <duration>120</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S10">
+        <type>sectional</type>
+        <date>2026-03-06</date>
+        <start>09:00</start>
+        <duration>150</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S11">
+        <type>concert</type>
+        <date>2026-03-07</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S12">
+        <type>dress rehearsal</type>
+        <date>2026-03-08</date>
+        <start>19:00</start>
+        <duration>150</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S13">
+        <type>dress rehearsal</type>
+        <date>2026-03-09</date>
+        <start>09:00</start>
+        <duration>150</duration>
+        <venue>Main Hall</venue>
+      </service>
+
+      <service id="S14">
+        <type>rehearsal</type>
+        <date>2026-03-10</date>
+        <start>13:00</start>
+        <duration>150</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S15">
+        <type>sectional</type>
+        <section>strings</section>
+        <date>2026-03-10</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S16">
+        <type>sectional</type>
+        <section>brass</section>
+        <date>2026-03-10</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S17">
+        <type>dress rehearsal</type>
+        <date>2026-03-11</date>
+        <start>19:00</start>
+        <duration>150</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S18">
+        <type>dress rehearsal</type>
+        <date>2026-03-12</date>
+        <start>13:00</start>
+        <duration>150</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S19">
+        <type>sectional</type>
+        <date>2026-03-13</date>
+        <start>19:00</start>
+        <duration>150</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S20">
+        <type>dress rehearsal</type>
+        <date>2026-03-14</date>
+        <start>13:00</start>
+        <duration>150</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S21">
+        <type>dress rehearsal</type>
+        <date>2026-03-15</date>
+        <start>09:00</start>
+        <duration>150</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S22">
+        <type>concert</type>
+        <date>2026-03-16</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S23">
+        <type>rehearsal</type>
+        <date>2026-03-17</date>
+        <start>19:00</start>
+        <duration>150</duration>
+        <venue>Main Hall</venue>
+      </service>
+
+      <service id="S24">
+        <type>sectional</type>
+        <section>strings</section>
+        <date>2026-03-17</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S25">
+        <type>sectional</type>
+        <section>brass</section>
+        <date>2026-03-17</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S26">
+        <type>dress rehearsal</type>
+        <date>2026-03-18</date>
+        <start>13:00</start>
+        <duration>150</duration>
+        <venue>Main Hall</venue>
+      </service>
+
+      <service id="S27">
+        <type>concert</type>
+        <date>2026-03-19</date>
+        <start>19:00</start>
+        <duration>120</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S28">
+        <type>sectional</type>
+        <date>2026-03-20</date>
+        <start>13:00</start>
+        <duration>150</duration>
+        <venue>Main Hall</venue>
+      </service>
+
+    </services>
+  </production>
+
+  <production id="P2">
+    <title>Brahms Symphony No.1</title>
+    <composer>Johannes Brahms</composer>
+    <conductor>Marco Rossi</conductor>
+
+    <services>
+
+      <service id="S29">
+        <type>rehearsal</type>
+        <date>2026-03-01</date>
+        <start>13:00</start>
+        <duration>150</duration>
+        <venue>Main Hall</venue>
+      </service>
+
+      <service id="S30">
+        <type>sectional</type>
+        <section>strings</section>
+        <date>2026-03-01</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S31">
+        <type>sectional</type>
+        <section>brass</section>
+        <date>2026-03-01</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S32">
+        <type>sectional</type>
+        <date>2026-03-02</date>
+        <start>19:00</start>
+        <duration>150</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S33">
+        <type>concert</type>
+        <date>2026-03-03</date>
+        <start>19:00</start>
+        <duration>120</duration>
+        <venue>Main Hall</venue>
+      </service>
+
+      <service id="S34">
+        <type>rehearsal</type>
+        <date>2026-03-04</date>
+        <start>09:00</start>
+        <duration>150</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S35">
+        <type>sectional</type>
+        <section>strings</section>
+        <date>2026-03-04</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S36">
+        <type>sectional</type>
+        <section>brass</section>
+        <date>2026-03-04</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S37">
+        <type>concert</type>
+        <date>2026-03-05</date>
+        <start>19:00</start>
+        <duration>120</duration>
+        <venue>Main Hall</venue>
+      </service>
+
+      <service id="S38">
+        <type>rehearsal</type>
+        <date>2026-03-06</date>
+        <start>13:00</start>
+        <duration>150</duration>
+        <venue>Main Hall</venue>
+      </service>
+
+      <service id="S39">
+        <type>sectional</type>
+        <section>strings</section>
+        <date>2026-03-06</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S40">
+        <type>sectional</type>
+        <section>brass</section>
+        <date>2026-03-06</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S41">
+        <type>rehearsal</type>
+        <date>2026-03-07</date>
+        <start>13:00</start>
+        <duration>150</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S42">
+        <type>sectional</type>
+        <section>strings</section>
+        <date>2026-03-07</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S43">
+        <type>sectional</type>
+        <section>brass</section>
+        <date>2026-03-07</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S44">
+        <type>concert</type>
+        <date>2026-03-08</date>
+        <start>19:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S45">
+        <type>sectional</type>
+        <date>2026-03-09</date>
+        <start>09:00</start>
+        <duration>150</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S46">
+        <type>dress rehearsal</type>
+        <date>2026-03-10</date>
+        <start>09:00</start>
+        <duration>150</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S47">
+        <type>concert</type>
+        <date>2026-03-11</date>
+        <start>19:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S48">
+        <type>dress rehearsal</type>
+        <date>2026-03-12</date>
+        <start>19:00</start>
+        <duration>150</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S49">
+        <type>dress rehearsal</type>
+        <date>2026-03-13</date>
+        <start>13:00</start>
+        <duration>150</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S50">
+        <type>sectional</type>
+        <date>2026-03-14</date>
+        <start>19:00</start>
+        <duration>150</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S51">
+        <type>sectional</type>
+        <date>2026-03-15</date>
+        <start>19:00</start>
+        <duration>150</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S52">
+        <type>sectional</type>
+        <date>2026-03-16</date>
+        <start>13:00</start>
+        <duration>150</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S53">
+        <type>rehearsal</type>
+        <date>2026-03-17</date>
+        <start>19:00</start>
+        <duration>150</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S54">
+        <type>sectional</type>
+        <section>strings</section>
+        <date>2026-03-17</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S55">
+        <type>sectional</type>
+        <section>brass</section>
+        <date>2026-03-17</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S56">
+        <type>rehearsal</type>
+        <date>2026-03-18</date>
+        <start>19:00</start>
+        <duration>150</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S57">
+        <type>sectional</type>
+        <section>strings</section>
+        <date>2026-03-18</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S58">
+        <type>sectional</type>
+        <section>brass</section>
+        <date>2026-03-18</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S59">
+        <type>concert</type>
+        <date>2026-03-19</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S60">
+        <type>rehearsal</type>
+        <date>2026-03-20</date>
+        <start>13:00</start>
+        <duration>150</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S61">
+        <type>sectional</type>
+        <section>strings</section>
+        <date>2026-03-20</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S62">
+        <type>sectional</type>
+        <section>brass</section>
+        <date>2026-03-20</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+    </services>
+  </production>
+
+  <production id="P3">
+    <title>Beethoven Symphony No.7</title>
+    <composer>Ludwig van Beethoven</composer>
+    <conductor>Elena Kovacs</conductor>
+
+    <services>
+
+      <service id="S63">
+        <type>dress rehearsal</type>
+        <date>2026-03-01</date>
+        <start>09:00</start>
+        <duration>150</duration>
+        <venue>Main Hall</venue>
+      </service>
+
+      <service id="S64">
+        <type>sectional</type>
+        <date>2026-03-02</date>
+        <start>09:00</start>
+        <duration>150</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S65">
+        <type>sectional</type>
+        <date>2026-03-03</date>
+        <start>13:00</start>
+        <duration>150</duration>
+        <venue>Main Hall</venue>
+      </service>
+
+      <service id="S66">
+        <type>rehearsal</type>
+        <date>2026-03-04</date>
+        <start>19:00</start>
+        <duration>150</duration>
+        <venue>Main Hall</venue>
+      </service>
+
+      <service id="S67">
+        <type>sectional</type>
+        <section>strings</section>
+        <date>2026-03-04</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S68">
+        <type>sectional</type>
+        <section>brass</section>
+        <date>2026-03-04</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S69">
+        <type>rehearsal</type>
+        <date>2026-03-05</date>
+        <start>09:00</start>
+        <duration>150</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S70">
+        <type>sectional</type>
+        <section>strings</section>
+        <date>2026-03-05</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S71">
+        <type>sectional</type>
+        <section>brass</section>
+        <date>2026-03-05</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S72">
+        <type>dress rehearsal</type>
+        <date>2026-03-06</date>
+        <start>13:00</start>
+        <duration>150</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S73">
+        <type>dress rehearsal</type>
+        <date>2026-03-07</date>
+        <start>19:00</start>
+        <duration>150</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S74">
+        <type>rehearsal</type>
+        <date>2026-03-08</date>
+        <start>19:00</start>
+        <duration>150</duration>
+        <venue>Main Hall</venue>
+      </service>
+
+      <service id="S75">
+        <type>sectional</type>
+        <section>strings</section>
+        <date>2026-03-08</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S76">
+        <type>sectional</type>
+        <section>brass</section>
+        <date>2026-03-08</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S77">
+        <type>sectional</type>
+        <date>2026-03-09</date>
+        <start>19:00</start>
+        <duration>150</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S78">
+        <type>sectional</type>
+        <date>2026-03-10</date>
+        <start>13:00</start>
+        <duration>150</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S79">
+        <type>dress rehearsal</type>
+        <date>2026-03-11</date>
+        <start>13:00</start>
+        <duration>150</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S80">
+        <type>concert</type>
+        <date>2026-03-12</date>
+        <start>13:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S81">
+        <type>dress rehearsal</type>
+        <date>2026-03-13</date>
+        <start>13:00</start>
+        <duration>150</duration>
+        <venue>Main Hall</venue>
+      </service>
+
+      <service id="S82">
+        <type>dress rehearsal</type>
+        <date>2026-03-14</date>
+        <start>19:00</start>
+        <duration>150</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S83">
+        <type>sectional</type>
+        <date>2026-03-15</date>
+        <start>13:00</start>
+        <duration>150</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S84">
+        <type>rehearsal</type>
+        <date>2026-03-16</date>
+        <start>19:00</start>
+        <duration>150</duration>
+        <venue>Main Hall</venue>
+      </service>
+
+      <service id="S85">
+        <type>sectional</type>
+        <section>strings</section>
+        <date>2026-03-16</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S86">
+        <type>sectional</type>
+        <section>brass</section>
+        <date>2026-03-16</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S87">
+        <type>concert</type>
+        <date>2026-03-17</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S88">
+        <type>sectional</type>
+        <date>2026-03-18</date>
+        <start>13:00</start>
+        <duration>150</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S89">
+        <type>dress rehearsal</type>
+        <date>2026-03-19</date>
+        <start>09:00</start>
+        <duration>150</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S90">
+        <type>sectional</type>
+        <date>2026-03-20</date>
+        <start>19:00</start>
+        <duration>150</duration>
+        <venue>Studio A</venue>
+      </service>
+
+    </services>
+  </production>
+
+  <production id="P4">
+    <title>Tchaikovsky Symphony No.5</title>
+    <composer>Pyotr Tchaikovsky</composer>
+    <conductor>David Chen</conductor>
+
+    <services>
+
+      <service id="S91">
+        <type>concert</type>
+        <date>2026-03-01</date>
+        <start>13:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S92">
+        <type>rehearsal</type>
+        <date>2026-03-02</date>
+        <start>13:00</start>
+        <duration>150</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S93">
+        <type>sectional</type>
+        <section>strings</section>
+        <date>2026-03-02</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S94">
+        <type>sectional</type>
+        <section>brass</section>
+        <date>2026-03-02</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S95">
+        <type>dress rehearsal</type>
+        <date>2026-03-03</date>
+        <start>13:00</start>
+        <duration>150</duration>
+        <venue>Main Hall</venue>
+      </service>
+
+      <service id="S96">
+        <type>dress rehearsal</type>
+        <date>2026-03-04</date>
+        <start>13:00</start>
+        <duration>150</duration>
+        <venue>Main Hall</venue>
+      </service>
+
+      <service id="S97">
+        <type>sectional</type>
+        <date>2026-03-05</date>
+        <start>19:00</start>
+        <duration>150</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S98">
+        <type>dress rehearsal</type>
+        <date>2026-03-06</date>
+        <start>19:00</start>
+        <duration>150</duration>
+        <venue>Main Hall</venue>
+      </service>
+
+      <service id="S99">
+        <type>dress rehearsal</type>
+        <date>2026-03-07</date>
+        <start>09:00</start>
+        <duration>150</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S100">
+        <type>rehearsal</type>
+        <date>2026-03-08</date>
+        <start>13:00</start>
+        <duration>150</duration>
+        <venue>Main Hall</venue>
+      </service>
+
+      <service id="S101">
+        <type>sectional</type>
+        <section>strings</section>
+        <date>2026-03-08</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S102">
+        <type>sectional</type>
+        <section>brass</section>
+        <date>2026-03-08</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S103">
+        <type>dress rehearsal</type>
+        <date>2026-03-09</date>
+        <start>19:00</start>
+        <duration>150</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S104">
+        <type>concert</type>
+        <date>2026-03-10</date>
+        <start>19:00</start>
+        <duration>120</duration>
+        <venue>Main Hall</venue>
+      </service>
+
+      <service id="S105">
+        <type>rehearsal</type>
+        <date>2026-03-11</date>
+        <start>19:00</start>
+        <duration>150</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S106">
+        <type>sectional</type>
+        <section>strings</section>
+        <date>2026-03-11</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S107">
+        <type>sectional</type>
+        <section>brass</section>
+        <date>2026-03-11</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S108">
+        <type>sectional</type>
+        <date>2026-03-12</date>
+        <start>19:00</start>
+        <duration>150</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S109">
+        <type>dress rehearsal</type>
+        <date>2026-03-13</date>
+        <start>13:00</start>
+        <duration>150</duration>
+        <venue>Main Hall</venue>
+      </service>
+
+      <service id="S110">
+        <type>sectional</type>
+        <date>2026-03-14</date>
+        <start>09:00</start>
+        <duration>150</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S111">
+        <type>concert</type>
+        <date>2026-03-15</date>
+        <start>19:00</start>
+        <duration>120</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S112">
+        <type>rehearsal</type>
+        <date>2026-03-16</date>
+        <start>09:00</start>
+        <duration>150</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S113">
+        <type>sectional</type>
+        <section>strings</section>
+        <date>2026-03-16</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S114">
+        <type>sectional</type>
+        <section>brass</section>
+        <date>2026-03-16</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S115">
+        <type>sectional</type>
+        <date>2026-03-17</date>
+        <start>19:00</start>
+        <duration>150</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S116">
+        <type>rehearsal</type>
+        <date>2026-03-18</date>
+        <start>09:00</start>
+        <duration>150</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S117">
+        <type>sectional</type>
+        <section>strings</section>
+        <date>2026-03-18</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio A</venue>
+      </service>
+
+      <service id="S118">
+        <type>sectional</type>
+        <section>brass</section>
+        <date>2026-03-18</date>
+        <start>09:00</start>
+        <duration>120</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S119">
+        <type>dress rehearsal</type>
+        <date>2026-03-19</date>
+        <start>19:00</start>
+        <duration>150</duration>
+        <venue>Studio B</venue>
+      </service>
+
+      <service id="S120">
+        <type>dress rehearsal</type>
+        <date>2026-03-20</date>
+        <start>19:00</start>
+        <duration>150</duration>
+        <venue>Studio A</venue>
+      </service>
+
+    </services>
+  </production>
+
+    </productions>
+  </season>
+</opasExport>

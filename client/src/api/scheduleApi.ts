@@ -1,36 +1,51 @@
-import type { ScheduleApiResponse, ScheduleMeta, WeekApiResponse } from "@scheduler/shared";
+const API_BASE = "http://localhost:4000/api"
 
-const API_BASE = "http://localhost:4000/api";
-
-export async function fetchMeta(): Promise<ScheduleMeta> {
-  const response = await fetch(`${API_BASE}/meta`);
-  if (!response.ok) {
-    throw new Error("Failed to fetch schedule metadata");
-  }
-  return response.json();
+export interface ScheduleEvent {
+  id: string
+  title: string
+  conductor?: string
+  venue?: string
+  production?: string
+  description?: string
+  start: string
+  end: string
+  day?: number
+  top?: number
+  height?: number
+  lane?: number
+  laneCount?: number
 }
 
-export async function fetchEvents(year?: number, month?: number): Promise<ScheduleApiResponse> {
-  const params = new URLSearchParams();
-  if (typeof year === "number") params.set("year", String(year));
-  if (typeof month === "number") params.set("month", String(month));
+export async function fetchEvents(): Promise<ScheduleEvent[]> {
+  const res = await fetch(`${API_BASE}/events`)
 
-  const response = await fetch(`${API_BASE}/events?${params.toString()}`);
-  if (!response.ok) {
-    throw new Error("Failed to fetch schedule events");
+  if (!res.ok) {
+    throw new Error("Failed to load events")
   }
-  return response.json();
+  return res.json()
 }
 
-export async function fetchWeek(year: number, week: number): Promise<WeekApiResponse> {
-  const params = new URLSearchParams({
-    year: String(year),
-    week: String(week)
-  });
+export async function fetchEventsByMonth(
+  year: number,
+  month: number
+): Promise<ScheduleEvent[]> {
 
-  const response = await fetch(`${API_BASE}/week?${params.toString()}`);
-  if (!response.ok) {
-    throw new Error("Failed to fetch weekly schedule");
+  const res = await fetch(
+    `${API_BASE}/events/month?year=${year}&month=${month}`
+  )
+  if (!res.ok) {
+    throw new Error("Failed to load monthly events")
   }
-  return response.json();
+  return res.json()
+}
+
+export async function reloadSchedule() {
+  const res = await fetch(`${API_BASE}/reload`, {
+    method: "POST"
+  })
+
+  if (!res.ok) {
+    throw new Error("Reload failed")
+  }
+  return res.json()
 }

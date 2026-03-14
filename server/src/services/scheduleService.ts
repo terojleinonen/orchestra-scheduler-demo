@@ -1,83 +1,55 @@
-import fs from "node:fs";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-import type { ScheduleApiResponse, ScheduleEvent, WeekApiResponse } from "@scheduler/shared";
-import { convertXmlToSchedule } from "../adapter/clientXmlAdapter.js";
-import { parseRawXml } from "../parser/rawXmlParser.js";
+import { loadEvents } from "../repositories/scheduleRepository"
+import { computeTimelineLayout } from "../layout/timelineLayout"
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const xmlPath = path.join(__dirname, "..", "data", "schedule.xml");
+import { type ScheduleEvent } from "../adapter/opasAdapter"
 
-let cache: ScheduleApiResponse | null = null;
+let preparedEvents: ScheduleEvent[] = []
 
-function startOfTodayIsoLocal(): string {
-  const now = new Date();
-  const local = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-  return local.toISOString();
-}
+export function getEvents(): ScheduleEvent[] {
 
-function isCurrentOrFuture(event: ScheduleEvent): boolean {
-  return event.end >= startOfTodayIsoLocal();
-}
+  if (!preparedEvents.length) {
 
-export function loadSchedule(): ScheduleApiResponse {
-  const xml = fs.readFileSync(xmlPath, "utf8");
-  const raw = parseRawXml(xml);
-  cache = convertXmlToSchedule(raw);
-  return cache;
-}
+    const events = loadEvents()
 
-export function getSchedule(): ScheduleApiResponse {
-  if (!cache) {
-    return loadSchedule();
-  }
-  return cache;
-}
+    computeTimelineLayout(events)
 
-export function getFilteredEvents(filters: {
-  year?: number;
-  month?: number;
-  currentAndFutureOnly?: boolean;
-} = {}): ScheduleApiResponse {
-  const schedule = getSchedule();
-  let events = [...schedule.events];
+    preparedEvents = events
 
-  if (filters.currentAndFutureOnly !== false) {
-    events = events.filter(isCurrentOrFuture);
   }
 
-  if (typeof filters.year === "number" && Number.isFinite(filters.year)) {
-    events = events.filter((event) => event.year === filters.year);
-  }
+  return preparedEvents
 
-  if (typeof filters.month === "number" && Number.isFinite(filters.month)) {
-    events = events.filter((event) => event.month === filters.month);
-  }
-
-  return {
-    meta: schedule.meta,
-    events
-  };
 }
 
-export function getWeek(year: number, week: number): WeekApiResponse {
-  const schedule = getSchedule();
-  const events = schedule.events.filter(
-    (event) => isCurrentOrFuture(event) && event.year === year && event.week === week
-  );
+export function getEventsByMonth(
+  year: number,
+  month: number
+) {
 
-  return {
-    meta: schedule.meta,
-    year,
-    week,
-    events
-  };
+  return getEvents().filter(event => {
+
+    const d = new Date(event.start)
+
+    return (
+      d.getFullYear() === year &&
+      d.getMonth() === month
+    )
+
+  })
+
 }
 
-export function watchSchedule(): void {
-  fs.watchFile(xmlPath, { interval: 500 }, () => {
-    loadSchedule();
-    console.log("Reloaded schedule XML.");
-  });
+export function getEventsByRange(
+  start: Date,
+  end: Date
+) {
+
+  return getEvents().filter(event => {
+
+    const d = new Date(event.start)
+
+    return d >= start && d <= end
+
+  })
+
 }
