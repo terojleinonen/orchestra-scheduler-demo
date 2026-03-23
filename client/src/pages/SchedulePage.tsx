@@ -1,76 +1,156 @@
-import { useEffect, useState } from "react"
+import React, { useMemo, useState } from "react"
+import { useSchedule } from "../scheduler/hooks/useSchedule"
 
-import { useSchedule } from "../hooks/useSchedule"
+import CalendarToolbar from "../scheduler/components/CalendarToolbar"
+import MonthCalendarView from "../scheduler/components/MonthCalendarView"
+import WeekListView from "../scheduler/components/WeekListView"
+import DayDetailView from "../scheduler/components/DayDetalView"
+import {
+  isSameDay,
+  getStartOfISOWeek
+} from "../scheduler/utils/calendarUtils"
 
-import WeekScheduler from "../components/WeekScheduler"
-import AgendaView from "../components/AgendaView"
-import MobileScheduler from "../components/MobileScheduler"
-import SchedulerToolbar from "../components/SchedulerToolbar"
-import EventInspector from "../components/EventInspector"
-import MonthView from "../components/MonthView"
+import type { ScheduleItemDto } from "../api/scheduleApi"
 
+// ==============================
+// Types
+// ==============================
 
-interface Props {
-  view: "week" | "agenda" | "month"
-}
+type ViewMode = "month" | "week" | "day"
 
-export default function SchedulePage({ view }: Props) {
-  const { events, loading, error } = useSchedule()
-  const [isMobile, setIsMobile] = useState(
-    window.innerWidth < 700
+// ==============================
+// Component
+// ==============================
+
+export default function SchedulePage() {
+  const { events, loading, error } = useSchedule({})
+
+  const [view, setView] = useState<ViewMode>("week")
+  const [selectedDate, setSelectedDate] = useState(new Date())
+  const [selectedEvent, setSelectedEvent] =
+    useState<ScheduleItemDto | null>(null)
+
+  // ==============================
+  // Filters
+  // ==============================
+
+  // Same year (keeps things simple)
+  const yearEvents = useMemo(() => {
+    return events.filter(e => {
+      const d = new Date(e.startAt)
+      return d.getFullYear() === selectedDate.getFullYear()
+    })
+  }, [events, selectedDate])
+
+  // Week range
+  const weekStart = useMemo(
+    () => getStartOfISOWeek(selectedDate),
+    [selectedDate]
   )
-  const currentYear = new Date().getFullYear()
-  const currentMonth = new Date().getMonth()
 
+  const weekEnd = useMemo(() => {
+    const d = new Date(weekStart)
+    d.setDate(weekStart.getDate() + 7)
+    return d
+  }, [weekStart])
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 700)
-    }
-    window.addEventListener("resize", handleResize)
-    return () => {
-      window.removeEventListener("resize", handleResize)
-    }
-  }, [])
+  const weekEvents = useMemo(() => {
+    return yearEvents.filter(e => {
+      const d = new Date(e.startAt)
+      return d >= weekStart && d < weekEnd
+    })
+  }, [yearEvents, weekStart, weekEnd])
+
+  // Day events
+  const dayEvents = useMemo(() => {
+    return yearEvents.filter(e =>
+      isSameDay(new Date(e.startAt), selectedDate)
+    )
+  }, [yearEvents, selectedDate])
+
+  // ==============================
+  // States
+  // ==============================
 
   if (loading) {
-    return <div className="loading">Loading schedule...</div>
+    return <div style={{ padding: 20 }}>Loading schedule...</div>
   }
 
   if (error) {
-    return <div className="error">{error}</div>
+    return (
+      <div style={{ padding: 20, color: "red" }}>
+        {error}
+      </div>
+    )
   }
 
-  return (
+  // ==============================
+  // Render
+  // ==============================
 
-    <div className="schedulePage">
-      <SchedulerToolbar />
+  return (
+    <div className="surface" style={{ padding: 20 }}>
+      <h1 style={{ marginBottom: 20 }}>
+        Orchestra Scheduler
+      </h1>
+
+      {/* ===================== */}
+      {/* Toolbar */}
+      {/* ===================== */}
+
+      <CalendarToolbar
+        view={view}
+        setView={setView}
+        selectedDate={selectedDate}
+        setSelectedDate={setSelectedDate}
+      />
+
+      {/* ===================== */}
+      {/* Views */}
+      {/* ===================== */}
 
       {view === "month" && (
-        <MonthView
-          events={events}
-          year={currentYear}
-          month={currentMonth}
+        <MonthCalendarView
+          events={yearEvents}
+          selectedDate={selectedDate}
+          onSelectDate={date => {
+            setSelectedDate(date)
+            setView("day") // your decision ✔
+          }}
         />
       )}
 
-
-      {view === "week" && !isMobile && (
-        <WeekScheduler events={events} />
+      {view === "week" && (
+        <WeekListView
+          events={weekEvents}
+          selectedDate={selectedDate}
+          onSelect={setSelectedEvent}
+        />
       )}
 
-      {view === "week" && isMobile && (
-        <MobileScheduler events={events} />
+      {view === "day" && (
+        <DayDetailView
+          events={dayEvents}
+          selectedDate={selectedDate}
+          onSelect={setSelectedEvent}
+        />
       )}
 
-      {view === "agenda" && (
-        <AgendaView events={events} />
+      {/* ===================== */}
+      {/* Overlay */}
+      {/* ===================== */}
+
+      {selectedEvent && (
+        <div
+          onClick={() => setSelectedEvent(null)}
+          style={{
+            position: "fixed",
+            inset: 0,
+            background: "rgba(0,0,0,0.4)",
+            zIndex: 999
+          }}
+        />
       )}
-
-      <EventInspector />
-
     </div>
-
   )
-
 }

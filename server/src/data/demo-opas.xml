@@ -1,1048 +1,1837 @@
+<events>
+  <event>
+    <id>2te8bsvcfof</id>
 
-<opasExport generated="2026-01-01">
-  <season year="2026">
-    <productions>
-
-  <production id="P1">
-    <title>Mahler Symphony No.2</title>
-    <composer>Gustav Mahler</composer>
-    <conductor>Anna Virtanen</conductor>
-
-    <services>
-
-      <service id="S1">
-        <type>concert</type>
-        <date>2026-03-01</date>
-        <start>13:00</start>
-        <duration>120</duration>
-        <venue>Main Hall</venue>
-      </service>
-
-      <service id="S2">
-        <type>rehearsal</type>
-        <date>2026-03-02</date>
-        <start>13:00</start>
-        <duration>150</duration>
-        <venue>Main Hall</venue>
-      </service>
-
-      <service id="S3">
-        <type>sectional</type>
-        <section>strings</section>
-        <date>2026-03-02</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S4">
-        <type>sectional</type>
-        <section>brass</section>
-        <date>2026-03-02</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S5">
-        <type>rehearsal</type>
-        <date>2026-03-03</date>
-        <start>13:00</start>
-        <duration>150</duration>
-        <venue>Main Hall</venue>
-      </service>
-
-      <service id="S6">
-        <type>sectional</type>
-        <section>strings</section>
-        <date>2026-03-03</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S7">
-        <type>sectional</type>
-        <section>brass</section>
-        <date>2026-03-03</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S8">
-        <type>dress rehearsal</type>
-        <date>2026-03-04</date>
-        <start>19:00</start>
-        <duration>150</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S9">
-        <type>concert</type>
-        <date>2026-03-05</date>
-        <start>13:00</start>
-        <duration>120</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S10">
-        <type>sectional</type>
-        <date>2026-03-06</date>
-        <start>09:00</start>
-        <duration>150</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S11">
-        <type>concert</type>
-        <date>2026-03-07</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S12">
-        <type>dress rehearsal</type>
-        <date>2026-03-08</date>
-        <start>19:00</start>
-        <duration>150</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S13">
-        <type>dress rehearsal</type>
-        <date>2026-03-09</date>
-        <start>09:00</start>
-        <duration>150</duration>
-        <venue>Main Hall</venue>
-      </service>
-
-      <service id="S14">
-        <type>rehearsal</type>
-        <date>2026-03-10</date>
-        <start>13:00</start>
-        <duration>150</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S15">
-        <type>sectional</type>
-        <section>strings</section>
-        <date>2026-03-10</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S16">
-        <type>sectional</type>
-        <section>brass</section>
-        <date>2026-03-10</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S17">
-        <type>dress rehearsal</type>
-        <date>2026-03-11</date>
-        <start>19:00</start>
-        <duration>150</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S18">
-        <type>dress rehearsal</type>
-        <date>2026-03-12</date>
-        <start>13:00</start>
-        <duration>150</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S19">
-        <type>sectional</type>
-        <date>2026-03-13</date>
-        <start>19:00</start>
-        <duration>150</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S20">
-        <type>dress rehearsal</type>
-        <date>2026-03-14</date>
-        <start>13:00</start>
-        <duration>150</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S21">
-        <type>dress rehearsal</type>
-        <date>2026-03-15</date>
-        <start>09:00</start>
-        <duration>150</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S22">
-        <type>concert</type>
-        <date>2026-03-16</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S23">
-        <type>rehearsal</type>
-        <date>2026-03-17</date>
-        <start>19:00</start>
-        <duration>150</duration>
-        <venue>Main Hall</venue>
-      </service>
-
-      <service id="S24">
-        <type>sectional</type>
-        <section>strings</section>
-        <date>2026-03-17</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S25">
-        <type>sectional</type>
-        <section>brass</section>
-        <date>2026-03-17</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S26">
-        <type>dress rehearsal</type>
-        <date>2026-03-18</date>
-        <start>13:00</start>
-        <duration>150</duration>
-        <venue>Main Hall</venue>
-      </service>
-
-      <service id="S27">
-        <type>concert</type>
-        <date>2026-03-19</date>
-        <start>19:00</start>
-        <duration>120</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S28">
-        <type>sectional</type>
-        <date>2026-03-20</date>
-        <start>13:00</start>
-        <duration>150</duration>
-        <venue>Main Hall</venue>
-      </service>
-
-    </services>
-  </production>
-
-  <production id="P2">
-    <title>Brahms Symphony No.1</title>
-    <composer>Johannes Brahms</composer>
-    <conductor>Marco Rossi</conductor>
-
-    <services>
-
-      <service id="S29">
-        <type>rehearsal</type>
-        <date>2026-03-01</date>
-        <start>13:00</start>
-        <duration>150</duration>
-        <venue>Main Hall</venue>
-      </service>
-
-      <service id="S30">
-        <type>sectional</type>
-        <section>strings</section>
-        <date>2026-03-01</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S31">
-        <type>sectional</type>
-        <section>brass</section>
-        <date>2026-03-01</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S32">
-        <type>sectional</type>
-        <date>2026-03-02</date>
-        <start>19:00</start>
-        <duration>150</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S33">
-        <type>concert</type>
-        <date>2026-03-03</date>
-        <start>19:00</start>
-        <duration>120</duration>
-        <venue>Main Hall</venue>
-      </service>
-
-      <service id="S34">
-        <type>rehearsal</type>
-        <date>2026-03-04</date>
-        <start>09:00</start>
-        <duration>150</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S35">
-        <type>sectional</type>
-        <section>strings</section>
-        <date>2026-03-04</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S36">
-        <type>sectional</type>
-        <section>brass</section>
-        <date>2026-03-04</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S37">
-        <type>concert</type>
-        <date>2026-03-05</date>
-        <start>19:00</start>
-        <duration>120</duration>
-        <venue>Main Hall</venue>
-      </service>
-
-      <service id="S38">
-        <type>rehearsal</type>
-        <date>2026-03-06</date>
-        <start>13:00</start>
-        <duration>150</duration>
-        <venue>Main Hall</venue>
-      </service>
-
-      <service id="S39">
-        <type>sectional</type>
-        <section>strings</section>
-        <date>2026-03-06</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S40">
-        <type>sectional</type>
-        <section>brass</section>
-        <date>2026-03-06</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S41">
-        <type>rehearsal</type>
-        <date>2026-03-07</date>
-        <start>13:00</start>
-        <duration>150</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S42">
-        <type>sectional</type>
-        <section>strings</section>
-        <date>2026-03-07</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S43">
-        <type>sectional</type>
-        <section>brass</section>
-        <date>2026-03-07</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S44">
-        <type>concert</type>
-        <date>2026-03-08</date>
-        <start>19:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S45">
-        <type>sectional</type>
-        <date>2026-03-09</date>
-        <start>09:00</start>
-        <duration>150</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S46">
-        <type>dress rehearsal</type>
-        <date>2026-03-10</date>
-        <start>09:00</start>
-        <duration>150</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S47">
-        <type>concert</type>
-        <date>2026-03-11</date>
-        <start>19:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S48">
-        <type>dress rehearsal</type>
-        <date>2026-03-12</date>
-        <start>19:00</start>
-        <duration>150</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S49">
-        <type>dress rehearsal</type>
-        <date>2026-03-13</date>
-        <start>13:00</start>
-        <duration>150</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S50">
-        <type>sectional</type>
-        <date>2026-03-14</date>
-        <start>19:00</start>
-        <duration>150</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S51">
-        <type>sectional</type>
-        <date>2026-03-15</date>
-        <start>19:00</start>
-        <duration>150</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S52">
-        <type>sectional</type>
-        <date>2026-03-16</date>
-        <start>13:00</start>
-        <duration>150</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S53">
-        <type>rehearsal</type>
-        <date>2026-03-17</date>
-        <start>19:00</start>
-        <duration>150</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S54">
-        <type>sectional</type>
-        <section>strings</section>
-        <date>2026-03-17</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S55">
-        <type>sectional</type>
-        <section>brass</section>
-        <date>2026-03-17</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S56">
-        <type>rehearsal</type>
-        <date>2026-03-18</date>
-        <start>19:00</start>
-        <duration>150</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S57">
-        <type>sectional</type>
-        <section>strings</section>
-        <date>2026-03-18</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S58">
-        <type>sectional</type>
-        <section>brass</section>
-        <date>2026-03-18</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S59">
-        <type>concert</type>
-        <date>2026-03-19</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S60">
-        <type>rehearsal</type>
-        <date>2026-03-20</date>
-        <start>13:00</start>
-        <duration>150</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S61">
-        <type>sectional</type>
-        <section>strings</section>
-        <date>2026-03-20</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S62">
-        <type>sectional</type>
-        <section>brass</section>
-        <date>2026-03-20</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-    </services>
-  </production>
-
-  <production id="P3">
-    <title>Beethoven Symphony No.7</title>
-    <composer>Ludwig van Beethoven</composer>
-    <conductor>Elena Kovacs</conductor>
-
-    <services>
-
-      <service id="S63">
-        <type>dress rehearsal</type>
-        <date>2026-03-01</date>
-        <start>09:00</start>
-        <duration>150</duration>
-        <venue>Main Hall</venue>
-      </service>
-
-      <service id="S64">
-        <type>sectional</type>
-        <date>2026-03-02</date>
-        <start>09:00</start>
-        <duration>150</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S65">
-        <type>sectional</type>
-        <date>2026-03-03</date>
-        <start>13:00</start>
-        <duration>150</duration>
-        <venue>Main Hall</venue>
-      </service>
-
-      <service id="S66">
-        <type>rehearsal</type>
-        <date>2026-03-04</date>
-        <start>19:00</start>
-        <duration>150</duration>
-        <venue>Main Hall</venue>
-      </service>
-
-      <service id="S67">
-        <type>sectional</type>
-        <section>strings</section>
-        <date>2026-03-04</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S68">
-        <type>sectional</type>
-        <section>brass</section>
-        <date>2026-03-04</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S69">
-        <type>rehearsal</type>
-        <date>2026-03-05</date>
-        <start>09:00</start>
-        <duration>150</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S70">
-        <type>sectional</type>
-        <section>strings</section>
-        <date>2026-03-05</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S71">
-        <type>sectional</type>
-        <section>brass</section>
-        <date>2026-03-05</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S72">
-        <type>dress rehearsal</type>
-        <date>2026-03-06</date>
-        <start>13:00</start>
-        <duration>150</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S73">
-        <type>dress rehearsal</type>
-        <date>2026-03-07</date>
-        <start>19:00</start>
-        <duration>150</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S74">
-        <type>rehearsal</type>
-        <date>2026-03-08</date>
-        <start>19:00</start>
-        <duration>150</duration>
-        <venue>Main Hall</venue>
-      </service>
-
-      <service id="S75">
-        <type>sectional</type>
-        <section>strings</section>
-        <date>2026-03-08</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S76">
-        <type>sectional</type>
-        <section>brass</section>
-        <date>2026-03-08</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S77">
-        <type>sectional</type>
-        <date>2026-03-09</date>
-        <start>19:00</start>
-        <duration>150</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S78">
-        <type>sectional</type>
-        <date>2026-03-10</date>
-        <start>13:00</start>
-        <duration>150</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S79">
-        <type>dress rehearsal</type>
-        <date>2026-03-11</date>
-        <start>13:00</start>
-        <duration>150</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S80">
-        <type>concert</type>
-        <date>2026-03-12</date>
-        <start>13:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S81">
-        <type>dress rehearsal</type>
-        <date>2026-03-13</date>
-        <start>13:00</start>
-        <duration>150</duration>
-        <venue>Main Hall</venue>
-      </service>
-
-      <service id="S82">
-        <type>dress rehearsal</type>
-        <date>2026-03-14</date>
-        <start>19:00</start>
-        <duration>150</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S83">
-        <type>sectional</type>
-        <date>2026-03-15</date>
-        <start>13:00</start>
-        <duration>150</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S84">
-        <type>rehearsal</type>
-        <date>2026-03-16</date>
-        <start>19:00</start>
-        <duration>150</duration>
-        <venue>Main Hall</venue>
-      </service>
-
-      <service id="S85">
-        <type>sectional</type>
-        <section>strings</section>
-        <date>2026-03-16</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S86">
-        <type>sectional</type>
-        <section>brass</section>
-        <date>2026-03-16</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S87">
-        <type>concert</type>
-        <date>2026-03-17</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S88">
-        <type>sectional</type>
-        <date>2026-03-18</date>
-        <start>13:00</start>
-        <duration>150</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S89">
-        <type>dress rehearsal</type>
-        <date>2026-03-19</date>
-        <start>09:00</start>
-        <duration>150</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S90">
-        <type>sectional</type>
-        <date>2026-03-20</date>
-        <start>19:00</start>
-        <duration>150</duration>
-        <venue>Studio A</venue>
-      </service>
-
-    </services>
-  </production>
-
-  <production id="P4">
-    <title>Tchaikovsky Symphony No.5</title>
-    <composer>Pyotr Tchaikovsky</composer>
-    <conductor>David Chen</conductor>
-
-    <services>
-
-      <service id="S91">
-        <type>concert</type>
-        <date>2026-03-01</date>
-        <start>13:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S92">
-        <type>rehearsal</type>
-        <date>2026-03-02</date>
-        <start>13:00</start>
-        <duration>150</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S93">
-        <type>sectional</type>
-        <section>strings</section>
-        <date>2026-03-02</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S94">
-        <type>sectional</type>
-        <section>brass</section>
-        <date>2026-03-02</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S95">
-        <type>dress rehearsal</type>
-        <date>2026-03-03</date>
-        <start>13:00</start>
-        <duration>150</duration>
-        <venue>Main Hall</venue>
-      </service>
-
-      <service id="S96">
-        <type>dress rehearsal</type>
-        <date>2026-03-04</date>
-        <start>13:00</start>
-        <duration>150</duration>
-        <venue>Main Hall</venue>
-      </service>
-
-      <service id="S97">
-        <type>sectional</type>
-        <date>2026-03-05</date>
-        <start>19:00</start>
-        <duration>150</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S98">
-        <type>dress rehearsal</type>
-        <date>2026-03-06</date>
-        <start>19:00</start>
-        <duration>150</duration>
-        <venue>Main Hall</venue>
-      </service>
-
-      <service id="S99">
-        <type>dress rehearsal</type>
-        <date>2026-03-07</date>
-        <start>09:00</start>
-        <duration>150</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S100">
-        <type>rehearsal</type>
-        <date>2026-03-08</date>
-        <start>13:00</start>
-        <duration>150</duration>
-        <venue>Main Hall</venue>
-      </service>
-
-      <service id="S101">
-        <type>sectional</type>
-        <section>strings</section>
-        <date>2026-03-08</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S102">
-        <type>sectional</type>
-        <section>brass</section>
-        <date>2026-03-08</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S103">
-        <type>dress rehearsal</type>
-        <date>2026-03-09</date>
-        <start>19:00</start>
-        <duration>150</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S104">
-        <type>concert</type>
-        <date>2026-03-10</date>
-        <start>19:00</start>
-        <duration>120</duration>
-        <venue>Main Hall</venue>
-      </service>
-
-      <service id="S105">
-        <type>rehearsal</type>
-        <date>2026-03-11</date>
-        <start>19:00</start>
-        <duration>150</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S106">
-        <type>sectional</type>
-        <section>strings</section>
-        <date>2026-03-11</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S107">
-        <type>sectional</type>
-        <section>brass</section>
-        <date>2026-03-11</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S108">
-        <type>sectional</type>
-        <date>2026-03-12</date>
-        <start>19:00</start>
-        <duration>150</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S109">
-        <type>dress rehearsal</type>
-        <date>2026-03-13</date>
-        <start>13:00</start>
-        <duration>150</duration>
-        <venue>Main Hall</venue>
-      </service>
-
-      <service id="S110">
-        <type>sectional</type>
-        <date>2026-03-14</date>
-        <start>09:00</start>
-        <duration>150</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S111">
-        <type>concert</type>
-        <date>2026-03-15</date>
-        <start>19:00</start>
-        <duration>120</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S112">
-        <type>rehearsal</type>
-        <date>2026-03-16</date>
-        <start>09:00</start>
-        <duration>150</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S113">
-        <type>sectional</type>
-        <section>strings</section>
-        <date>2026-03-16</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S114">
-        <type>sectional</type>
-        <section>brass</section>
-        <date>2026-03-16</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S115">
-        <type>sectional</type>
-        <date>2026-03-17</date>
-        <start>19:00</start>
-        <duration>150</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S116">
-        <type>rehearsal</type>
-        <date>2026-03-18</date>
-        <start>09:00</start>
-        <duration>150</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S117">
-        <type>sectional</type>
-        <section>strings</section>
-        <date>2026-03-18</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio A</venue>
-      </service>
-
-      <service id="S118">
-        <type>sectional</type>
-        <section>brass</section>
-        <date>2026-03-18</date>
-        <start>09:00</start>
-        <duration>120</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S119">
-        <type>dress rehearsal</type>
-        <date>2026-03-19</date>
-        <start>19:00</start>
-        <duration>150</duration>
-        <venue>Studio B</venue>
-      </service>
-
-      <service id="S120">
-        <type>dress rehearsal</type>
-        <date>2026-03-20</date>
-        <start>19:00</start>
-        <duration>150</duration>
-        <venue>Studio A</venue>
-      </service>
-
-    </services>
-  </production>
-
-    </productions>
-  </season>
-</opasExport>
+    <year>2026</year>
+    <month>3</month>
+    <weekNumber>12</weekNumber>
+    <weekday>5</weekday>
+
+    <startTime>2026-03-20T17:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>concert</workType>
+    <department>orchestra</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>lighting rig</item><item>microphones</item><item>chairs</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>bonntsyqj1i</id>
+
+    <year>2026</year>
+    <month>3</month>
+    <weekNumber>12</weekNumber>
+    <weekday>6</weekday>
+
+    <startTime>2026-03-21T17:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>concert</workType>
+    <department>orchestra</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>lighting rig</item><item>microphones</item><item>chairs</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>sao9xpe4wf</id>
+
+    <year>2026</year>
+    <month>3</month>
+    <weekNumber>13</weekNumber>
+    <weekday>1</weekday>
+
+    <startTime>2026-03-23T08:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>kb8uagjvfd</id>
+
+    <year>2026</year>
+    <month>3</month>
+    <weekNumber>13</weekNumber>
+    <weekday>2</weekday>
+
+    <startTime>2026-03-24T08:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>qudlk9d9d88</id>
+
+    <year>2026</year>
+    <month>3</month>
+    <weekNumber>13</weekNumber>
+    <weekday>3</weekday>
+
+    <startTime>2026-03-25T08:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>9seeea5c2o7</id>
+
+    <year>2026</year>
+    <month>3</month>
+    <weekNumber>13</weekNumber>
+    <weekday>4</weekday>
+
+    <startTime>2026-03-26T06:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>setup</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>stage platforms</item><item>cables</item><item>lights</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>93yo50wk8z7</id>
+
+    <year>2026</year>
+    <month>3</month>
+    <weekNumber>13</weekNumber>
+    <weekday>4</weekday>
+
+    <startTime>2026-03-26T08:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+  <event>
+    <id>9utdhw9suf7</id>
+
+    <year>2026</year>
+    <month>3</month>
+    <weekNumber>13</weekNumber>
+    <weekday>5</weekday>
+
+    <startTime>2026-03-27T17:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>concert</workType>
+    <department>orchestra</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>lighting rig</item><item>microphones</item><item>chairs</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>a9fsvp2xpbg</id>
+
+    <year>2026</year>
+    <month>3</month>
+    <weekNumber>13</weekNumber>
+    <weekday>6</weekday>
+
+    <startTime>2026-03-28T17:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>concert</workType>
+    <department>orchestra</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>lighting rig</item><item>microphones</item><item>chairs</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>lmwjv4fvg3l</id>
+
+    <year>2026</year>
+    <month>3</month>
+    <weekNumber>14</weekNumber>
+    <weekday>1</weekday>
+
+    <startTime>2026-03-30T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>157z0vael4p</id>
+
+    <year>2026</year>
+    <month>3</month>
+    <weekNumber>14</weekNumber>
+    <weekday>2</weekday>
+
+    <startTime>2026-03-31T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>deszhowz7op</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>14</weekNumber>
+    <weekday>3</weekday>
+
+    <startTime>2026-04-01T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>lh6uyg4tam</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>14</weekNumber>
+    <weekday>4</weekday>
+
+    <startTime>2026-04-02T05:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>setup</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>stage platforms</item><item>cables</item><item>lights</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>y8360on0gg</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>14</weekNumber>
+    <weekday>4</weekday>
+
+    <startTime>2026-04-02T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+  <event>
+    <id>xc76o5rzkbn</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>14</weekNumber>
+    <weekday>5</weekday>
+
+    <startTime>2026-04-03T16:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>concert</workType>
+    <department>orchestra</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>lighting rig</item><item>microphones</item><item>chairs</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>kwq6shwgrti</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>14</weekNumber>
+    <weekday>6</weekday>
+
+    <startTime>2026-04-04T16:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>concert</workType>
+    <department>orchestra</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>lighting rig</item><item>microphones</item><item>chairs</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>tmhjuk0n1up</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>15</weekNumber>
+    <weekday>1</weekday>
+
+    <startTime>2026-04-06T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>p24o9cf230h</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>15</weekNumber>
+    <weekday>2</weekday>
+
+    <startTime>2026-04-07T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>p9o4geg1ggf</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>15</weekNumber>
+    <weekday>3</weekday>
+
+    <startTime>2026-04-08T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>fp63lyx2zri</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>15</weekNumber>
+    <weekday>4</weekday>
+
+    <startTime>2026-04-09T05:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>setup</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>stage platforms</item><item>cables</item><item>lights</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>17l1oapfe0n</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>15</weekNumber>
+    <weekday>4</weekday>
+
+    <startTime>2026-04-09T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+  <event>
+    <id>kr3x27iq5zf</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>15</weekNumber>
+    <weekday>5</weekday>
+
+    <startTime>2026-04-10T16:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>concert</workType>
+    <department>orchestra</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>lighting rig</item><item>microphones</item><item>chairs</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>04aazj8tt8ik</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>15</weekNumber>
+    <weekday>6</weekday>
+
+    <startTime>2026-04-11T16:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>concert</workType>
+    <department>orchestra</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>lighting rig</item><item>microphones</item><item>chairs</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>cx5kvxm7yau</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>16</weekNumber>
+    <weekday>1</weekday>
+
+    <startTime>2026-04-13T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>v20o58xbwf</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>16</weekNumber>
+    <weekday>2</weekday>
+
+    <startTime>2026-04-14T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>lqda182bsve</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>16</weekNumber>
+    <weekday>3</weekday>
+
+    <startTime>2026-04-15T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>d6kopyey4u</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>16</weekNumber>
+    <weekday>4</weekday>
+
+    <startTime>2026-04-16T05:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>setup</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>stage platforms</item><item>cables</item><item>lights</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>c3rf2tt2uqb</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>16</weekNumber>
+    <weekday>4</weekday>
+
+    <startTime>2026-04-16T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+  <event>
+    <id>8hc8d8e0e5y</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>16</weekNumber>
+    <weekday>5</weekday>
+
+    <startTime>2026-04-17T16:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>concert</workType>
+    <department>orchestra</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>lighting rig</item><item>microphones</item><item>chairs</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>h3eskuk7jop</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>16</weekNumber>
+    <weekday>6</weekday>
+
+    <startTime>2026-04-18T16:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>concert</workType>
+    <department>orchestra</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>lighting rig</item><item>microphones</item><item>chairs</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>0864e8z7ti6c</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>17</weekNumber>
+    <weekday>1</weekday>
+
+    <startTime>2026-04-20T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>eihr613ln0a</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>17</weekNumber>
+    <weekday>2</weekday>
+
+    <startTime>2026-04-21T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>jog557e0fen</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>17</weekNumber>
+    <weekday>3</weekday>
+
+    <startTime>2026-04-22T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>0pjxc223lxw</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>17</weekNumber>
+    <weekday>4</weekday>
+
+    <startTime>2026-04-23T05:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>setup</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>stage platforms</item><item>cables</item><item>lights</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>4x5oovrfqkd</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>17</weekNumber>
+    <weekday>4</weekday>
+
+    <startTime>2026-04-23T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+  <event>
+    <id>xciz03ql4ge</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>17</weekNumber>
+    <weekday>5</weekday>
+
+    <startTime>2026-04-24T16:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>concert</workType>
+    <department>orchestra</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>lighting rig</item><item>microphones</item><item>chairs</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>annvwxw21mt</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>17</weekNumber>
+    <weekday>6</weekday>
+
+    <startTime>2026-04-25T16:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>concert</workType>
+    <department>orchestra</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>lighting rig</item><item>microphones</item><item>chairs</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>x8zrxrra5p</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>18</weekNumber>
+    <weekday>1</weekday>
+
+    <startTime>2026-04-27T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>21qz4t7k8yhj</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>18</weekNumber>
+    <weekday>2</weekday>
+
+    <startTime>2026-04-28T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>ksfwi92xx7l</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>18</weekNumber>
+    <weekday>3</weekday>
+
+    <startTime>2026-04-29T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>ax2y5490hn9</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>18</weekNumber>
+    <weekday>4</weekday>
+
+    <startTime>2026-04-30T05:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>setup</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>stage platforms</item><item>cables</item><item>lights</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>jahi7v9g1km</id>
+
+    <year>2026</year>
+    <month>4</month>
+    <weekNumber>18</weekNumber>
+    <weekday>4</weekday>
+
+    <startTime>2026-04-30T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+  <event>
+    <id>68j36mlsa4v</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>18</weekNumber>
+    <weekday>5</weekday>
+
+    <startTime>2026-05-01T16:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>concert</workType>
+    <department>orchestra</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>lighting rig</item><item>microphones</item><item>chairs</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>xpvrfa7m32</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>18</weekNumber>
+    <weekday>6</weekday>
+
+    <startTime>2026-05-02T16:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>concert</workType>
+    <department>orchestra</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>lighting rig</item><item>microphones</item><item>chairs</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>ydaimmxhgyl</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>19</weekNumber>
+    <weekday>1</weekday>
+
+    <startTime>2026-05-04T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>wds4ur70df</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>19</weekNumber>
+    <weekday>2</weekday>
+
+    <startTime>2026-05-05T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>3o5nl147qdc</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>19</weekNumber>
+    <weekday>3</weekday>
+
+    <startTime>2026-05-06T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>rh1mrjacvcp</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>19</weekNumber>
+    <weekday>4</weekday>
+
+    <startTime>2026-05-07T05:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>setup</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>stage platforms</item><item>cables</item><item>lights</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>o29dbr9lpmp</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>19</weekNumber>
+    <weekday>4</weekday>
+
+    <startTime>2026-05-07T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+  <event>
+    <id>i6g1lqmq60a</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>19</weekNumber>
+    <weekday>5</weekday>
+
+    <startTime>2026-05-08T16:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>concert</workType>
+    <department>orchestra</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>lighting rig</item><item>microphones</item><item>chairs</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>sknwsxoq85o</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>19</weekNumber>
+    <weekday>6</weekday>
+
+    <startTime>2026-05-09T16:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>concert</workType>
+    <department>orchestra</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>lighting rig</item><item>microphones</item><item>chairs</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>ojhf6xevns8</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>20</weekNumber>
+    <weekday>1</weekday>
+
+    <startTime>2026-05-11T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>eteii0uo36g</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>20</weekNumber>
+    <weekday>2</weekday>
+
+    <startTime>2026-05-12T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>5u2o9abf0is</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>20</weekNumber>
+    <weekday>3</weekday>
+
+    <startTime>2026-05-13T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>w83rvxqdml</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>20</weekNumber>
+    <weekday>4</weekday>
+
+    <startTime>2026-05-14T05:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>setup</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>stage platforms</item><item>cables</item><item>lights</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>ldu1crkvmze</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>20</weekNumber>
+    <weekday>4</weekday>
+
+    <startTime>2026-05-14T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+  <event>
+    <id>3e4xlys1k56</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>20</weekNumber>
+    <weekday>5</weekday>
+
+    <startTime>2026-05-15T16:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>concert</workType>
+    <department>orchestra</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>lighting rig</item><item>microphones</item><item>chairs</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>kjrxkcyc4de</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>20</weekNumber>
+    <weekday>6</weekday>
+
+    <startTime>2026-05-16T16:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>concert</workType>
+    <department>orchestra</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>lighting rig</item><item>microphones</item><item>chairs</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>g45e0k3mml8</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>21</weekNumber>
+    <weekday>1</weekday>
+
+    <startTime>2026-05-18T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>kwodi077vv</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>21</weekNumber>
+    <weekday>2</weekday>
+
+    <startTime>2026-05-19T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>9a5nz4ex02k</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>21</weekNumber>
+    <weekday>3</weekday>
+
+    <startTime>2026-05-20T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>a991o2s4klk</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>21</weekNumber>
+    <weekday>4</weekday>
+
+    <startTime>2026-05-21T05:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>setup</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>stage platforms</item><item>cables</item><item>lights</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>6orqkj79wt8</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>21</weekNumber>
+    <weekday>4</weekday>
+
+    <startTime>2026-05-21T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+  <event>
+    <id>4u9ez68b7a9</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>21</weekNumber>
+    <weekday>5</weekday>
+
+    <startTime>2026-05-22T16:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>concert</workType>
+    <department>orchestra</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>lighting rig</item><item>microphones</item><item>chairs</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>4an4qmlfm7c</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>21</weekNumber>
+    <weekday>6</weekday>
+
+    <startTime>2026-05-23T16:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>concert</workType>
+    <department>orchestra</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>lighting rig</item><item>microphones</item><item>chairs</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>ev9v7os2d3a</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>22</weekNumber>
+    <weekday>1</weekday>
+
+    <startTime>2026-05-25T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>0z5kobpnccl</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>22</weekNumber>
+    <weekday>2</weekday>
+
+    <startTime>2026-05-26T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>96966g2pqgs</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>22</weekNumber>
+    <weekday>3</weekday>
+
+    <startTime>2026-05-27T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>88moag43g8x</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>22</weekNumber>
+    <weekday>4</weekday>
+
+    <startTime>2026-05-28T05:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>setup</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>stage platforms</item><item>cables</item><item>lights</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>wvlfeq7361k</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>22</weekNumber>
+    <weekday>4</weekday>
+
+    <startTime>2026-05-28T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+  <event>
+    <id>l7xbpfg082e</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>22</weekNumber>
+    <weekday>5</weekday>
+
+    <startTime>2026-05-29T16:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>concert</workType>
+    <department>orchestra</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>lighting rig</item><item>microphones</item><item>chairs</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>a8e9qlydzgb</id>
+
+    <year>2026</year>
+    <month>5</month>
+    <weekNumber>22</weekNumber>
+    <weekday>6</weekday>
+
+    <startTime>2026-05-30T16:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>concert</workType>
+    <department>orchestra</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>lighting rig</item><item>microphones</item><item>chairs</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>3ammrd6ek6t</id>
+
+    <year>2026</year>
+    <month>6</month>
+    <weekNumber>23</weekNumber>
+    <weekday>1</weekday>
+
+    <startTime>2026-06-01T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>8zx6czdmgt4</id>
+
+    <year>2026</year>
+    <month>6</month>
+    <weekNumber>23</weekNumber>
+    <weekday>2</weekday>
+
+    <startTime>2026-06-02T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>yo8qkclkgfg</id>
+
+    <year>2026</year>
+    <month>6</month>
+    <weekNumber>23</weekNumber>
+    <weekday>3</weekday>
+
+    <startTime>2026-06-03T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>v1gug9cwiu</id>
+
+    <year>2026</year>
+    <month>6</month>
+    <weekNumber>23</weekNumber>
+    <weekday>4</weekday>
+
+    <startTime>2026-06-04T05:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>setup</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>stage platforms</item><item>cables</item><item>lights</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>5vmdxpzgy3u</id>
+
+    <year>2026</year>
+    <month>6</month>
+    <weekNumber>23</weekNumber>
+    <weekday>4</weekday>
+
+    <startTime>2026-06-04T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+  <event>
+    <id>qmxacdgoqys</id>
+
+    <year>2026</year>
+    <month>6</month>
+    <weekNumber>23</weekNumber>
+    <weekday>5</weekday>
+
+    <startTime>2026-06-05T16:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>concert</workType>
+    <department>orchestra</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>lighting rig</item><item>microphones</item><item>chairs</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>8qs99h8dat9</id>
+
+    <year>2026</year>
+    <month>6</month>
+    <weekNumber>23</weekNumber>
+    <weekday>6</weekday>
+
+    <startTime>2026-06-06T16:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>concert</workType>
+    <department>orchestra</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>lighting rig</item><item>microphones</item><item>chairs</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>a08vc39edln</id>
+
+    <year>2026</year>
+    <month>6</month>
+    <weekNumber>24</weekNumber>
+    <weekday>1</weekday>
+
+    <startTime>2026-06-08T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>w5hkgfanhz</id>
+
+    <year>2026</year>
+    <month>6</month>
+    <weekNumber>24</weekNumber>
+    <weekday>2</weekday>
+
+    <startTime>2026-06-09T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>h6xeh30832</id>
+
+    <year>2026</year>
+    <month>6</month>
+    <weekNumber>24</weekNumber>
+    <weekday>3</weekday>
+
+    <startTime>2026-06-10T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>csakz7e3r2v</id>
+
+    <year>2026</year>
+    <month>6</month>
+    <weekNumber>24</weekNumber>
+    <weekday>4</weekday>
+
+    <startTime>2026-06-11T05:00:00.918Z</startTime>
+    <duration>120</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>setup</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>stage platforms</item><item>cables</item><item>lights</item>
+    </equipment>
+  </event>
+
+  <event>
+    <id>pfu80vq14d</id>
+
+    <year>2026</year>
+    <month>6</month>
+    <weekNumber>24</weekNumber>
+    <weekday>4</weekday>
+
+    <startTime>2026-06-11T07:00:00.918Z</startTime>
+    <duration>180</duration>
+
+    <production>Mahler Symphony No.5</production>
+    <workType>rehearsal</workType>
+    <department>technical</department>
+
+    <venue>Main Hall</venue>
+
+    <equipment>
+      <item>chairs</item><item>music stands</item>
+    </equipment>
+  </event></events>

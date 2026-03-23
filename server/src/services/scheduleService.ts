@@ -1,55 +1,33 @@
-import { loadEvents } from "../repositories/scheduleRepository"
-import { computeTimelineLayout } from "../layout/timelineLayout"
+import { type WorkOrder } from "../domain/WorkOrder"
 
-import { type ScheduleEvent } from "../adapter/opasAdapter"
+type Query = {
+  year?: number
+  month?: number
+  week?: number
+}
 
-let preparedEvents: ScheduleEvent[] = []
+export function filterWorkOrders(
+  items: WorkOrder[],
+  query: Query
+) {
+  let result = items
 
-export function getEvents(): ScheduleEvent[] {
-
-  if (!preparedEvents.length) {
-
-    const events = loadEvents()
-
-    computeTimelineLayout(events)
-
-    preparedEvents = events
-
+  if (query.year) {
+    result = result.filter(e => e.year === query.year)
   }
 
-  return preparedEvents
+  if (query.month) {
+    result = result.filter(e => e.month === query.month)
+  }
 
-}
+  if (query.week) {
+    result = result.filter(e => e.weekNumber === query.week)
+  }
 
-export function getEventsByMonth(
-  year: number,
-  month: number
-) {
+  if (!query.year && !query.month && !query.week) {
+    const now = new Date()
+    result = result.filter(e => new Date(e.startAt) >= now)
+  }
 
-  return getEvents().filter(event => {
-
-    const d = new Date(event.start)
-
-    return (
-      d.getFullYear() === year &&
-      d.getMonth() === month
-    )
-
-  })
-
-}
-
-export function getEventsByRange(
-  start: Date,
-  end: Date
-) {
-
-  return getEvents().filter(event => {
-
-    const d = new Date(event.start)
-
-    return d >= start && d <= end
-
-  })
-
+  return result
 }

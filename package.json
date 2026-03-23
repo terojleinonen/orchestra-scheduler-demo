@@ -10,21 +10,26 @@
     "dev": "concurrently \"npm run dev --workspace server\" \"npm run dev --workspace client\"",
     "build": "npm run build --workspace shared && npm run build --workspace server && npm run build --workspace client",
     "server": "npm run dev --workspace server",
-    "client": "npm run dev --workspace client"
+    "client": "npm run dev --workspace client",
+    "generate:xml": "tsx scripts/generateFakeOpasXml.ts"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
-    "@types/node": "^25.4.0",
+    "@types/node": "^25.5.0",
     "@types/react-window": "^1.8.8",
     "@types/sax": "^1.2.7",
+    "@types/xml2js": "^0.4.14",
     "concurrently": "^9.1.2",
-    "typescript": "^5.8.2"
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "fast-xml-parser": "^5.5.3",
     "react-window": "^1.8.7",
-    "sax": "^1.5.0"
+    "sax": "^1.5.0",
+    "xml2js": "^0.6.2"
   }
 }

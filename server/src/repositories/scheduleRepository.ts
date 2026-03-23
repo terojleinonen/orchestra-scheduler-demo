@@ -1,34 +1,29 @@
-import fs from "fs"
-import path from "path"
-import { XMLParser } from "fast-xml-parser"
+import { type WorkOrder } from "../domain/WorkOrder"
+import { FileXmlSource } from "../infrastructure/sources/fileXmlSource"
+import { parseXml } from "../infrastructure/xml/xmlParser"
+import { OpasAdapter } from "../infrastructure/adapters/opasAdapter"
 
-import { convertOpasXmlToEvents, type ScheduleEvent } from "../adapter/opasAdapter"
+const source = new FileXmlSource("src/data/demo-opas.xml")
+const adapter = new OpasAdapter()
 
-const XML_PATH = path.join(
-    process.cwd(),
-    "src",
-    "data",
-    "demo-opas.xml"
-)
+let cache: WorkOrder[] | null = null
 
-let cachedEvents: ScheduleEvent[] = []
+export async function getAllWorkOrders(): Promise<WorkOrder[]> {
+  if (cache) return cache
 
-export function loadEvents(): ScheduleEvent[] {
+  const xml = await source.read()
+  const parsed = await parseXml(xml)
 
-  if (cachedEvents.length) {
-    return cachedEvents
+  if (!adapter.canHandle(parsed)) {
+    throw new Error("No adapter found for XML")
   }
 
-  const xml = fs.readFileSync(XML_PATH, "utf8")
+  const result = adapter.extract(parsed)
 
-  const parser = new XMLParser({
-    ignoreAttributes: false
-  })
+  cache = result
+  return result
+}
 
-  const parsed = parser.parse(xml)
-
-  cachedEvents = convertOpasXmlToEvents(parsed)
-
-  return cachedEvents
-
+export function clearCache() {
+  cache = null
 }

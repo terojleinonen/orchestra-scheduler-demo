@@ -1,0 +1,185 @@
+@import "./theme.css";
+
+body {
+  margin: 0;
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(59, 130, 246, 0.08),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(255, 255, 255, 0.04),
+      transparent 40%
+    ),
+    var(--bg-main);
+
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+}
+
+/* Smooth feel */
+* {
+  box-sizing: border-box;
+}
+
+/* Scrollbars (premium touch) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 8px;
+}
+
+.surface {
+  background: var(--bg-surface);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.surface-strong {
+  background: var(--bg-surface-strong);
+  border: 1px solid var(--border-strong);
+}
+
+.h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.subtle {
+  color: var(--text-secondary);
+}
+
+.btn {
+  border: none;
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: 0.2s ease;
+  border: 1px solid var(--border-soft);
+}
+
+.btn:hover {
+  background: var(--bg-surface-strong);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-active {
+  background: var(--accent);
+}
+
+.toolbar {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.toolbar select {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-soft);
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: 50px repeat(7, 1fr);
+  gap: 6px;
+}
+
+.calendar-cell {
+  padding: 8px;
+  min-height: 90px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.calendar-cell:hover {
+  background: var(--bg-surface-strong);
+}
+
+.calendar-cell-muted {
+  opacity: 0.4;
+}
+
+.day-section {
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.event-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.event-row:hover {
+  background: var(--bg-surface-strong);
+  border-radius: 8px;
+}
+
+.scheduler {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.event-block {
+  position: absolute;
+  border-radius: 8px;
+  background: linear-gradient(
+    180deg,
+    #3b82f6,
+    #1d4ed8
+  );
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: 0.15s ease;
+}
+
+.event-block:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.scheduler {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.event-block {
+  position: absolute;
+  border-radius: 8px;
+  background: linear-gradient(
+    180deg,
+    #3b82f6,
+    #1d4ed8
+  );
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: 0.15s ease;
+}
+
+.event-block:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 12px var(--accent-glow);
+}

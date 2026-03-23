@@ -1,14 +1,18 @@
-import { Router } from "express"
+import express from "express"
+import { getAllWorkOrders } from "../repositories/scheduleRepository"
+import { filterWorkOrders } from "../services/scheduleService"
 
-import {
-  listEvents,
-  eventsByMonth
-} from "../controllers/eventController"
+const router = express.Router()
 
-const router = Router()
+router.get("/", async (req, res) => {
+  const year = req.query.year ? Number(req.query.year) : undefined
+  const month = req.query.month ? Number(req.query.month) : undefined
+  const week = req.query.week ? Number(req.query.week) : undefined
 
-router.get("/events", listEvents)
+  const data = await getAllWorkOrders()
+  const filtered = filterWorkOrders(data, { year, month, week })
 
-router.get("/events/month", eventsByMonth)
+  res.json(filtered)
+})
 
 export default router

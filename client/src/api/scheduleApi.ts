@@ -1,51 +1,124 @@
+// client/src/api/scheduleApi.ts
+
+// ==============================
+// Types (should ideally come from /shared)
+// ==============================
+
+export type GetEventsQuery = {
+  year?: number
+  month?: number // 1–12
+  week?: number  // 1–53
+}
+
+export type ScheduleItemDto = {
+  id: string
+
+  title: string
+  startAt: string
+  durationMinutes?: number
+
+  year: number
+  month: number
+  weekNumber: number
+  weekday: number
+
+  production?: string
+  workType?: string
+  department?: string
+  venue?: string
+
+  equipment: string[]
+}
+
+// ==============================
+// Base config
+// ==============================
+
 const API_BASE = "http://localhost:4000/api"
 
-export interface ScheduleEvent {
-  id: string
-  title: string
-  conductor?: string
-  venue?: string
-  production?: string
-  description?: string
-  start: string
-  end: string
-  day?: number
-  top?: number
-  height?: number
-  lane?: number
-  laneCount?: number
+// ==============================
+// Helpers
+// ==============================
+
+function buildQuery(params: Record<string, any>) {
+  const search = new URLSearchParams()
+
+  Object.entries(params).forEach(([key, value]) => {
+    if (value !== undefined && value !== null) {
+      search.append(key, String(value))
+    }
+  })
+
+  const queryString = search.toString()
+  return queryString ? `?${queryString}` : ""
 }
 
-export async function fetchEvents(): Promise<ScheduleEvent[]> {
-  const res = await fetch(`${API_BASE}/events`)
-
+async function handleResponse(res: Response) {
   if (!res.ok) {
-    throw new Error("Failed to load events")
+    const text = await res.text()
+    throw new Error(`API error ${res.status}: ${text}`)
   }
+
   return res.json()
 }
 
-export async function fetchEventsByMonth(
-  year: number,
-  month: number
-): Promise<ScheduleEvent[]> {
+// ==============================
+// API FUNCTIONS
+// ==============================
 
-  const res = await fetch(
-    `${API_BASE}/events/month?year=${year}&month=${month}`
-  )
-  if (!res.ok) {
-    throw new Error("Failed to load monthly events")
-  }
-  return res.json()
+/**
+ * Fetch events with optional filtering
+ *
+ * Examples:
+ * getEvents()
+ * getEvents({ year: 2026 })
+ * getEvents({ year: 2026, week: 11 })
+ */
+export async function getEvents(
+  query: GetEventsQuery = {}
+): Promise<ScheduleItemDto[]> {
+  const url = `${API_BASE}/events${buildQuery(query)}`
+
+  const res = await fetch(url)
+
+  return handleResponse(res)
 }
 
-export async function reloadSchedule() {
-  const res = await fetch(`${API_BASE}/reload`, {
+/**
+ * Reload / clear cache on backend
+ */
+export async function reloadSchedule(): Promise<{ message: string }> {
+  const res = await fetch(`${API_BASE}/events/reload`, {
     method: "POST"
   })
 
-  if (!res.ok) {
-    throw new Error("Reload failed")
-  }
-  return res.json()
+  return handleResponse(res)
+}
+
+/**
+ * Dev-only: generate fake data
+ */
+export async function generateFakeData(options?: {
+  weeks?: number
+  mode?: string
+}): Promise<{ message: string }> {
+  const query = buildQuery(options || {})
+
+  const res = await fetch(`${API_BASE}/dev/generate${query}`, {
+    method: "POST"
+  })
+
+  return handleResponse(res)
+}
+
+/**
+ * Optional: fetch metadata (if you implement it later)
+ */
+export async function getScheduleMeta(): Promise<{
+  years: number[]
+  months: number[]
+  weeks: number[]
+}> {
+  const res = await fetch(`${API_BASE}/events/meta`)
+  return handleResponse(res)
 }
