@@ -61,11 +61,17 @@ export default function SchedulePage() {
 
       <div className="status-bar">
         <p className="status-bar__count" aria-hidden="true">
-          {data.eventCount} {data.eventCount === 1 ? "event" : "events"}
+          {data.countLabel}
         </p>
         {/* Announces every completed update to screen reader users */}
         <p className="visually-hidden" role="status" aria-live="polite">
-          {loading ? "Loading…" : data.summary}
+          {loading ? (
+            "Loading…"
+          ) : (
+            <>
+              <span lang={data.dateLang}>{data.title}</span>, {data.subtitle}: {data.countLabel}.
+            </>
+          )}
         </p>
         {loading && <p aria-hidden="true">Updating…</p>}
       </div>
@@ -85,6 +91,7 @@ export default function SchedulePage() {
             <MonthCalendarView
               month={content}
               caption={data.title}
+              lang={data.dateLang}
               onSelectDate={d => {
                 focusHeadingOnLoad.current = true
                 setParams({ date: d, view: "day" })
@@ -92,9 +99,9 @@ export default function SchedulePage() {
             />
           )}
 
-          {content.view === "week" && <WeekListView week={content} />}
+          {content.view === "week" && <WeekListView week={content} lang={data.dateLang} />}
 
-          {content.view === "day" && <DayDetailView day={content} />}
+          {content.view === "day" && <DayDetailView day={content} lang={data.dateLang} />}
         </div>
       </div>
     </>

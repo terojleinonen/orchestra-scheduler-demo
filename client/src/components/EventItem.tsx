@@ -5,9 +5,10 @@ import { departmentColor } from "../utils/departmentTheme"
 type Props = {
   event: EventDto
   headingLevel: 2 | 3
+  lang: string // language of the formatted time and duration
 }
 
-export default function EventItem({ event, headingLevel }: Props) {
+export default function EventItem({ event, headingLevel, lang }: Props) {
   const Heading = `h${headingLevel}` as const
   const style = { "--dept-color": departmentColor(event.department) } as CSSProperties
 
@@ -22,10 +23,12 @@ export default function EventItem({ event, headingLevel }: Props) {
   return (
     <li className="event" style={style}>
       <p className="event__time">
-        <time dateTime={event.startAt}>{event.timeRange}</time>
+        <time dateTime={event.startAt} lang={lang}>
+          {event.timeRange}
+        </time>
         <span className="event__duration">
           <span className="visually-hidden">Duration </span>
-          {event.duration}
+          <span lang={lang}>{event.duration}</span>
         </span>
       </p>
 

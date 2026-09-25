@@ -74,6 +74,10 @@ export function formatDateKey(key: string, options: Intl.DateTimeFormatOptions):
   return toDate(key).toLocaleDateString(LOCALE, { ...options, timeZone: "UTC" })
 }
 
+export function formatDateRange(from: string, to: string, options: Intl.DateTimeFormatOptions): string {
+  return new Intl.DateTimeFormat(LOCALE, { ...options, timeZone: "UTC" }).formatRange(toDate(from), toDate(to))
+}
+
 const timeFormat = new Intl.DateTimeFormat(LOCALE, {
   timeZone: TIME_ZONE,
   hour: "2-digit",

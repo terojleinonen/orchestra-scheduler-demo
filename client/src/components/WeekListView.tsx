@@ -1,7 +1,7 @@
 import type { WeekViewDto } from "@orchestra/shared"
 import EventItem from "./EventItem"
 
-export default function WeekListView({ week }: { week: WeekViewDto }) {
+export default function WeekListView({ week, lang }: { week: WeekViewDto; lang: string }) {
   return (
     <div className="week">
       {week.days.map(day => {
@@ -10,7 +10,7 @@ export default function WeekListView({ week }: { week: WeekViewDto }) {
         return (
           <section key={day.date} className="card day-section" aria-labelledby={headingId}>
             <div className="day-section__header">
-              <h2 id={headingId} className="day-section__title">
+              <h2 id={headingId} className="day-section__title" lang={lang}>
                 {day.label}
               </h2>
               {day.isToday && <span className="badge">Today</span>}
@@ -24,7 +24,7 @@ export default function WeekListView({ week }: { week: WeekViewDto }) {
             ) : (
               <ul className="event-list" role="list">
                 {day.events.map(event => (
-                  <EventItem key={event.id} event={event} headingLevel={3} />
+                  <EventItem key={event.id} event={event} headingLevel={3} lang={lang} />
                 ))}
               </ul>
             )}

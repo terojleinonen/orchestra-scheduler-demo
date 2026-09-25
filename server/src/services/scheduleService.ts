@@ -9,10 +9,12 @@ import type {
   WeekViewDto
 } from "@orchestra/shared"
 import { type WorkOrder } from "../domain/WorkOrder"
+import { DATE_LANG } from "../config"
 import {
   addDays,
   addMonths,
   formatDateKey,
+  formatDateRange,
   formatTime,
   isoWeek,
   isoWeekday,
@@ -73,30 +75,24 @@ const capitalize = (s: string) => s[0].toUpperCase() + s.slice(1)
 
 const plural = (n: number, word: string) => `${n} ${word}${n === 1 ? "" : "s"}`
 
+// Finnish abbreviations: "2 t 30 min"
 function formatDuration(minutes: number) {
   const h = Math.floor(minutes / 60)
   const m = minutes % 60
-  return [h && `${h} h`, m && `${m} min`].filter(Boolean).join(" ") || "0 min"
+  return [h && `${h} t`, m && `${m} min`].filter(Boolean).join(" ") || "0 min"
 }
 
-// "16–22 March 2026", "30 March – 5 April 2026", "29 December 2025 – 4 January 2026"
-function formatRange(from: string, to: string) {
-  const full = (d: string) => formatDateKey(d, { day: "numeric", month: "long", year: "numeric" })
-
-  if (from.slice(0, 4) !== to.slice(0, 4)) return `${full(from)} – ${full(to)}`
-  if (!sameMonth(from, to)) {
-    return `${formatDateKey(from, { day: "numeric", month: "long" })} – ${full(to)}`
-  }
-  return `${Number(from.slice(8))}–${full(to)}`
+// Weekday and date formatted separately to get "Perjantai 20. maaliskuuta 2026"
+// (with a year ICU would use the essive "perjantaina").
+function weekdayAndDate(d: string, options: Intl.DateTimeFormatOptions) {
+  return capitalize(`${formatDateKey(d, { weekday: "long" })} ${formatDateKey(d, options)}`)
 }
 
-const fullDate = (d: string) =>
-  formatDateKey(d, { weekday: "long", day: "numeric", month: "long", year: "numeric" })
+const fullDate = (d: string) => weekdayAndDate(d, { day: "numeric", month: "long", year: "numeric" })
 
 function toEventDto(item: WorkOrder): EventDto {
   const start = new Date(item.startAt)
   const end = new Date(start.getTime() + item.durationMinutes * 60_000)
-  const day = localDateKey(start)
 
   return {
     id: item.id,
@@ -104,7 +100,6 @@ function toEventDto(item: WorkOrder): EventDto {
     startAt: item.startAt,
     timeRange: `${formatTime(start)}–${formatTime(end)}`,
     duration: formatDuration(item.durationMinutes),
-    weekLabel: `Week ${isoWeek(day)}, ${formatDateKey(day, { weekday: "long" })}`,
     production: item.production,
     workType: item.workType && capitalize(item.workType),
     department: item.department,
@@ -166,14 +161,14 @@ function buildMonthView({ date, today, eventsOn }: Context): ViewResult<MonthVie
   })
 
   return {
-    title: formatDateKey(date, { month: "long", year: "numeric" }),
+    title: capitalize(formatDateKey(date, { month: "long", year: "numeric" })),
     subtitle: `Weeks ${weeks[0].weekNumber}–${weeks[5].weekNumber}`,
     eventCount,
     content: {
       view: "month",
       weekdays: weeks[0].days.map(d => ({
-        short: formatDateKey(d.date, { weekday: "short" }),
-        long: formatDateKey(d.date, { weekday: "long" })
+        short: capitalize(formatDateKey(d.date, { weekday: "short" })),
+        long: capitalize(formatDateKey(d.date, { weekday: "long" }))
       })),
       weeks
     }
@@ -188,15 +183,15 @@ function buildWeekView({ date, today, eventsOn }: Context): ViewResult<WeekViewD
 
     return {
       date: day,
-      label: formatDateKey(day, { weekday: "long", day: "numeric", month: "long" }),
+      label: weekdayAndDate(day, { day: "numeric", month: "long" }),
       isToday: day === today,
       events: eventsOn(day).map(toEventDto)
     }
   })
 
   return {
-    title: `Week ${isoWeek(date)}, ${isoWeekYear(date)}`,
-    subtitle: formatRange(monday, addDays(monday, 6)),
+    title: formatDateRange(monday, addDays(monday, 6), { day: "numeric", month: "long", year: "numeric" }),
+    subtitle: `Week ${isoWeek(date)}, ${isoWeekYear(date)}`,
     eventCount: days.reduce((sum, d) => sum + d.events.length, 0),
     content: { view: "week", days }
   }
@@ -241,7 +236,7 @@ function buildToolbar(index: ScheduleIndex, view: ViewMode, date: string, today:
 
   const months: NavOption[] = Array.from({ length: 12 }, (_, i) => {
     const value = `${year}-${String(i + 1).padStart(2, "0")}-01`
-    return { value, label: formatDateKey(value, { month: "long" }) }
+    return { value, label: capitalize(formatDateKey(value, { month: "long" })) }
   })
 
   // One option per ISO week touching the month; navigates to the week's first day in the month.
@@ -292,10 +287,10 @@ export function buildSchedule(
     view,
     date,
     department,
+    dateLang: DATE_LANG,
     title,
     subtitle,
-    summary: `${title}: ${plural(eventCount, "event")}${filter}.`,
-    eventCount,
+    countLabel: `${plural(eventCount, "event")}${filter}`,
     toolbar: buildToolbar(index, view, date, today),
     content
   }

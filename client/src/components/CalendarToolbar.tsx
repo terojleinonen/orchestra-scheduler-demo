@@ -17,13 +17,15 @@ function Select({
   value,
   options,
   onChange,
-  allLabel
+  allLabel,
+  optionLang
 }: {
   label: string
   value: string
   options: NavOption[]
   onChange: (value: string) => void
   allLabel?: string
+  optionLang?: string
 }) {
   const id = useId()
 
@@ -33,7 +35,7 @@ function Select({
       <select id={id} value={value} onChange={e => onChange(e.target.value)}>
         {allLabel !== undefined && <option value="">{allLabel}</option>}
         {options.map(o => (
-          <option key={o.value} value={o.value}>
+          <option key={o.value} value={o.value} lang={optionLang}>
             {o.label}
           </option>
         ))}
@@ -70,7 +72,7 @@ export default function CalendarToolbar({
         </nav>
 
         <div className="toolbar__heading">
-          <h1 id="view-title" className="toolbar__title" ref={headingRef} tabIndex={-1}>
+          <h1 id="view-title" className="toolbar__title" ref={headingRef} tabIndex={-1} lang={data.dateLang}>
             {data.title}
           </h1>
           <p className="toolbar__subtitle">{data.subtitle}</p>
@@ -87,7 +89,13 @@ export default function CalendarToolbar({
 
       <div className="toolbar__filters" role="group" aria-label="Filters">
         <Select label="Year" value={toolbar.selectedYear} options={toolbar.years} onChange={onNavigate} />
-        <Select label="Month" value={toolbar.selectedMonth} options={toolbar.months} onChange={onNavigate} />
+        <Select
+          label="Month"
+          value={toolbar.selectedMonth}
+          options={toolbar.months}
+          onChange={onNavigate}
+          optionLang={data.dateLang}
+        />
         <Select label="Week" value={toolbar.selectedWeek} options={toolbar.weeks} onChange={onWeekChange} />
         <Select
           label="Department"

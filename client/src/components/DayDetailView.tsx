@@ -1,7 +1,7 @@
 import type { DayViewDto } from "@orchestra/shared"
 import EventItem from "./EventItem"
 
-export default function DayDetailView({ day }: { day: DayViewDto }) {
+export default function DayDetailView({ day, lang }: { day: DayViewDto; lang: string }) {
   return (
     <div className="card day-view">
       {day.events.length === 0 ? (
@@ -9,7 +9,7 @@ export default function DayDetailView({ day }: { day: DayViewDto }) {
       ) : (
         <ul className="event-list" role="list">
           {day.events.map(event => (
-            <EventItem key={event.id} event={event} headingLevel={2} />
+            <EventItem key={event.id} event={event} headingLevel={2} lang={lang} />
           ))}
         </ul>
       )}

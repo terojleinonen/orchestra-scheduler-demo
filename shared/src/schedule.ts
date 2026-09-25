@@ -1,6 +1,8 @@
 // Contract between server and client.
 // The server builds these ready-to-render view models; the client only displays them.
 // All dates are "YYYY-MM-DD" strings in the schedule's time zone.
+// Fields marked [dateLang] contain formatted dates/times in ScheduleResponse.dateLang;
+// all other text is English.
 
 export type ViewMode = "month" | "week" | "day"
 
@@ -12,7 +14,7 @@ export type NavOption = {
 export type ToolbarDto = {
   years: NavOption[] // value = date to navigate to
   selectedYear: string
-  months: NavOption[] // value = date to navigate to
+  months: NavOption[] // value = date to navigate to, label [dateLang]
   selectedMonth: string
   weeks: NavOption[] // value = date to navigate to
   selectedWeek: string
@@ -26,9 +28,8 @@ export type EventDto = {
   id: string
   title: string
   startAt: string // ISO timestamp, for <time dateTime>
-  timeRange: string
-  duration: string
-  weekLabel: string
+  timeRange: string // [dateLang]
+  duration: string // [dateLang]
   production?: string
   workType?: string
   department?: string // key, e.g. "lighting"
@@ -41,7 +42,7 @@ export type EventDto = {
 export type MonthDayDto = {
   date: string
   dayOfMonth: number
-  label: string // full date, e.g. "Friday 20 March 2026"
+  label: string // [dateLang] full date
   inMonth: boolean
   isToday: boolean
   eventCount: number
@@ -50,13 +51,13 @@ export type MonthDayDto = {
 
 export type MonthViewDto = {
   view: "month"
-  weekdays: { short: string; long: string }[]
+  weekdays: { short: string; long: string }[] // [dateLang]
   weeks: { weekNumber: number; days: MonthDayDto[] }[]
 }
 
 export type WeekViewDto = {
   view: "week"
-  days: { date: string; label: string; isToday: boolean; events: EventDto[] }[]
+  days: { date: string; label: string; isToday: boolean; events: EventDto[] }[] // label [dateLang]
 }
 
 export type DayViewDto = {
@@ -68,10 +69,10 @@ export type ScheduleResponse = {
   view: ViewMode
   date: string
   department: string // "" = all departments
-  title: string // e.g. "Week 12, 2026"
-  subtitle: string // e.g. "16–22 March 2026"
-  summary: string // sentence for screen reader announcements
-  eventCount: number
+  dateLang: string // BCP 47 language of the [dateLang] fields, e.g. "fi"
+  title: string // [dateLang] the date or date range shown
+  subtitle: string // e.g. "Week 12"
+  countLabel: string // e.g. "27 events for Lighting"
   toolbar: ToolbarDto
   content: MonthViewDto | WeekViewDto | DayViewDto
 }

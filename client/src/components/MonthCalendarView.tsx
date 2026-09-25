@@ -4,19 +4,20 @@ import { departmentColor } from "../utils/departmentTheme"
 type Props = {
   month: MonthViewDto
   caption: string
+  lang: string
   onSelectDate: (date: string) => void
 }
 
 const plural = (n: number) => `${n} ${n === 1 ? "event" : "events"}`
 
-export default function MonthCalendarView({ month, caption, onSelectDate }: Props) {
+export default function MonthCalendarView({ month, caption, lang, onSelectDate }: Props) {
   const departments = [...new Set(month.weeks.flatMap(w => w.days.flatMap(d => d.departments)))].sort()
 
   return (
     <div className="card month">
       <table>
         <caption className="visually-hidden">
-          {caption}. Select a day to open its schedule.
+          <span lang={lang}>{caption}</span>. Select a day to open its schedule.
         </caption>
         <thead>
           <tr>
@@ -25,7 +26,9 @@ export default function MonthCalendarView({ month, caption, onSelectDate }: Prop
             </th>
             {month.weekdays.map(d => (
               <th key={d.long} scope="col">
-                <abbr title={d.long}>{d.short}</abbr>
+                <abbr title={d.long} lang={lang}>
+                  {d.short}
+                </abbr>
               </th>
             ))}
           </tr>
@@ -48,13 +51,18 @@ export default function MonthCalendarView({ month, caption, onSelectDate }: Prop
                     ]
                       .filter(Boolean)
                       .join(" ")}
-                    aria-label={`${day.label}${day.isToday ? ", today" : ""}, ${plural(day.eventCount)}`}
                     aria-current={day.isToday ? "date" : undefined}
                     onClick={() => onSelectDate(day.date)}
                   >
-                    <span className="day-cell__number">{day.dayOfMonth}</span>
+                    <span className="day-cell__number" aria-hidden="true">
+                      {day.dayOfMonth}
+                    </span>
+                    <span className="visually-hidden">
+                      <span lang={lang}>{day.label}</span>
+                      {day.isToday ? ", today" : ""}, {plural(day.eventCount)}
+                    </span>
                     {day.eventCount > 0 && (
-                      <span className="day-cell__count">
+                      <span className="day-cell__count" aria-hidden="true">
                         {day.eventCount}
                         <span className="day-cell__count-word"> {day.eventCount === 1 ? "event" : "events"}</span>
                       </span>
