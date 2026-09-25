@@ -8,10 +8,11 @@ const VIEWS: ViewMode[] = ["month", "week", "day"]
 
 const router = express.Router()
 
-// GET /api/schedule?view=week&date=2026-03-20
+// GET /api/schedule?view=week&date=2026-03-20&department=lighting
 router.get("/", async (req, res) => {
   const view = String(req.query.view ?? "week") as ViewMode
   const date = req.query.date === undefined ? undefined : String(req.query.date)
+  const department = String(req.query.department ?? "")
 
   if (!VIEWS.includes(view)) {
     res.status(400).json({ error: `view must be one of: ${VIEWS.join(", ")}` })
@@ -25,7 +26,7 @@ router.get("/", async (req, res) => {
 
   const items = await getAllWorkOrders()
 
-  res.json(buildSchedule(items, view, date ?? defaultDate(items)))
+  res.json(buildSchedule(items, view, date ?? defaultDate(items), department))
 })
 
 export default router

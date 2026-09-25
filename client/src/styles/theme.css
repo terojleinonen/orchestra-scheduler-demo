@@ -1,21 +1,82 @@
+/* Design tokens. All text colours meet WCAG AA (4.5:1) against their surfaces;
+   control borders and focus rings meet 3:1 (WCAG 1.4.11). */
+
 :root {
-  --bg-main: #0b0c10;
-  --bg-surface: rgba(255, 255, 255, 0.04);
-  --bg-surface-strong: rgba(255, 255, 255, 0.08);
+  color-scheme: light;
 
-  --border-soft: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.18);
+  --bg: #f4f5f7;
+  --surface: #ffffff;
+  --surface-muted: #f8f9fb;
+  --surface-hover: #eef2f7;
 
-  --text-primary: #e5e7eb;
-  --text-secondary: #9ca3af;
-  --text-muted: #6b7280;
+  --text: #111827;
+  --text-secondary: #374151;
+  --text-muted: #4b5563;
 
-  --accent: #3b82f6;
-  --accent-glow: rgba(59, 130, 246, 0.4);
+  --border: #d9dde3;
+  --border-control: #6b7280;
 
-  --radius: 12px;
-  --radius-sm: 8px;
+  --accent: #1d4ed8;
+  --accent-hover: #1e40af;
+  --accent-text: #ffffff;
+  --accent-soft: #e8efff;
+  --accent-soft-text: #1e3a8a;
 
-  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.4);
-  --shadow-glow: 0 0 20px var(--accent-glow);
+  --focus: #1d4ed8;
+  --danger-bg: #fef2f2;
+  --danger-text: #991b1b;
+
+  --dept-orchestra: #1d4ed8;
+  --dept-choir: #0e7490;
+  --dept-stage: #15803d;
+  --dept-lighting: #a16207;
+  --dept-sound: #7e22ce;
+  --dept-library: #be123c;
+  --dept-production: #c2410c;
+  --dept-default: #4b5563;
+
+  --radius: 0.75rem;
+  --radius-sm: 0.5rem;
+  --shadow: 0 1px 2px rgb(16 24 40 / 0.06), 0 1px 3px rgb(16 24 40 / 0.1);
+
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --bg: #0e1116;
+    --surface: #161b22;
+    --surface-muted: #1b212a;
+    --surface-hover: #222a35;
+
+    --text: #f3f4f6;
+    --text-secondary: #d1d5db;
+    --text-muted: #aab2bf;
+
+    --border: #2d3540;
+    --border-control: #8b95a5;
+
+    --accent: #93c5fd;
+    --accent-hover: #bfdbfe;
+    --accent-text: #0b1220;
+    --accent-soft: #1e2a44;
+    --accent-soft-text: #bfdbfe;
+
+    --focus: #93c5fd;
+    --danger-bg: #3b1215;
+    --danger-text: #fecaca;
+
+    --dept-orchestra: #60a5fa;
+    --dept-choir: #22d3ee;
+    --dept-stage: #4ade80;
+    --dept-lighting: #facc15;
+    --dept-sound: #c084fc;
+    --dept-library: #fb7185;
+    --dept-production: #fb923c;
+    --dept-default: #9ca3af;
+
+    --shadow: 0 1px 2px rgb(0 0 0 / 0.4);
+  }
 }

@@ -1,7 +1,7 @@
 // Calendar math on "YYYY-MM-DD" date keys.
 // Keys are handled as UTC midnights so results never depend on the server's local time zone.
 
-import { TIME_ZONE } from "../config"
+import { LOCALE, TIME_ZONE } from "../config"
 
 const DAY_MS = 86_400_000
 
@@ -35,6 +35,15 @@ export function isoWeekYear(key: string): number {
   return toDate(addDays(key, 4 - isoWeekday(key))).getUTCFullYear()
 }
 
+// Same day of month n months later, clamped to the month's last day
+export function addMonths(key: string, months: number): string {
+  const d = toDate(key)
+  const target = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + months, 1))
+  const lastDay = new Date(Date.UTC(target.getUTCFullYear(), target.getUTCMonth() + 1, 0)).getUTCDate()
+  target.setUTCDate(Math.min(d.getUTCDate(), lastDay))
+  return toKey(target)
+}
+
 export function startOfMonth(key: string): string {
   return `${key.slice(0, 7)}-01`
 }
@@ -61,11 +70,11 @@ export function localDateKey(instant: Date | string): string {
   return localDateFormat.format(new Date(instant))
 }
 
-export function formatDateKey(key: string, locale: string, options: Intl.DateTimeFormatOptions): string {
-  return toDate(key).toLocaleDateString(locale, { ...options, timeZone: "UTC" })
+export function formatDateKey(key: string, options: Intl.DateTimeFormatOptions): string {
+  return toDate(key).toLocaleDateString(LOCALE, { ...options, timeZone: "UTC" })
 }
 
-const timeFormat = new Intl.DateTimeFormat("fi-FI", {
+const timeFormat = new Intl.DateTimeFormat(LOCALE, {
   timeZone: TIME_ZONE,
   hour: "2-digit",
   minute: "2-digit"

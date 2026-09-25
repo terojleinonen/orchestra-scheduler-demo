@@ -1,6 +1,6 @@
-import { useState } from "react"
-import type { ViewMode } from "@orchestra/shared"
+import { useEffect, useRef } from "react"
 import { useSchedule } from "../hooks/useSchedule"
+import { useUrlState } from "../hooks/useUrlState"
 
 import CalendarToolbar from "../components/CalendarToolbar"
 import MonthCalendarView from "../components/MonthCalendarView"
@@ -8,52 +8,95 @@ import WeekListView from "../components/WeekListView"
 import DayDetailView from "../components/DayDetailView"
 
 export default function SchedulePage() {
-  const [view, setView] = useState<ViewMode>("week")
-  const [date, setDate] = useState<string>()
+  const [params, setParams] = useUrlState()
+  const { data, loading, error, retry } = useSchedule(params)
 
-  const { data, loading, error } = useSchedule(view, date)
+  const headingRef = useRef<HTMLHeadingElement>(null)
+  const focusHeadingOnLoad = useRef(false)
 
-  if (error) {
-    return <div style={{ padding: 20, color: "red" }}>{error}</div>
-  }
+  // Record the date the server chose so the URL is shareable.
+  useEffect(() => {
+    if (data && !params.date) setParams({ date: data.date }, { replace: true })
+  }, [data, params.date, setParams])
+
+  useEffect(() => {
+    if (!data) return
+    document.title = `${data.title} – Orchestra Scheduler`
+
+    // When the control the user activated disappears (e.g. a month day), move focus to the new view.
+    if (focusHeadingOnLoad.current) {
+      focusHeadingOnLoad.current = false
+      headingRef.current?.focus()
+    }
+  }, [data])
 
   if (!data) {
-    return <div style={{ padding: 20 }}>{loading ? "Loading schedule..." : null}</div>
+    return error ? (
+      <div className="alert" role="alert">
+        <span>{error}</span>
+        <button className="btn" onClick={retry}>
+          Try again
+        </button>
+      </div>
+    ) : (
+      <p className="placeholder" role="status">
+        Loading schedule…
+      </p>
+    )
   }
 
   const { content } = data
+  const date = data.date
 
   return (
-    <div className="surface" style={{ padding: 20 }}>
-      <h1 style={{ marginBottom: 20 }}>Orchestra Scheduler</h1>
-
+    <>
       <CalendarToolbar
-        toolbar={data.toolbar}
-        view={view}
-        onViewChange={v => {
-          setDate(data.date)
-          setView(v)
-        }}
-        onMonthChange={setDate}
-        onWeekChange={d => {
-          setDate(d)
-          setView("week")
-        }}
+        data={data}
+        headingRef={headingRef}
+        onNavigate={d => setParams({ date: d })}
+        onViewChange={view => setParams({ view, date })}
+        onWeekChange={d => setParams({ date: d, view: "week" })}
+        onDepartmentChange={department => setParams({ department, date })}
       />
 
-      {content.view === "month" && (
-        <MonthCalendarView
-          month={content}
-          onSelectDate={d => {
-            setDate(d)
-            setView("day")
-          }}
-        />
+      <div className="status-bar">
+        <p className="status-bar__count" aria-hidden="true">
+          {data.eventCount} {data.eventCount === 1 ? "event" : "events"}
+        </p>
+        {/* Announces every completed update to screen reader users */}
+        <p className="visually-hidden" role="status" aria-live="polite">
+          {loading ? "Loading…" : data.summary}
+        </p>
+        {loading && <p aria-hidden="true">Updating…</p>}
+      </div>
+
+      {error && (
+        <div className="alert" role="alert" style={{ marginBottom: "1rem" }}>
+          <span>{error}</span>
+          <button className="btn" onClick={retry}>
+            Try again
+          </button>
+        </div>
       )}
 
-      {content.view === "week" && <WeekListView week={content} />}
+      <div aria-busy={loading}>
+        <div className="view">
+          {content.view === "month" && (
+            <MonthCalendarView
+              month={content}
+              caption={data.title}
+              onSelectDate={d => {
+                focusHeadingOnLoad.current = true
+                setParams({ date: d, view: "day" })
+              }}
+            />
+          )}
 
-      {content.view === "day" && <DayDetailView day={content} />}
-    </div>
+          {content.view === "week" && <WeekListView week={content} />}
+
+          {content.view === "day" && <DayDetailView day={content} />}
+        </div>
+      </div>
+    </>
   )
 }

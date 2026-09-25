@@ -24,6 +24,7 @@ export class OpasAdapter implements ScheduleAdapter {
       workType: e.workType?.[0],
       department: e.department?.[0],
       venue: e.venue?.[0],
+      conductor: e.conductor?.[0],
 
       equipment: e.equipment?.[0]?.item || []
     }))

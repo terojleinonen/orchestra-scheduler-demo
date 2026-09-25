@@ -1,13 +1,7 @@
-const departmentColors: Record<string, string> = {
-  lighting: "#facc15",
-  sound: "#a855f7",
-  stage: "#22c55e",
-  orchestra: "#3b82f6",
-  production: "#f97316"
-}
+// Department colours are defined as CSS custom properties in theme.css (light and dark variants).
+const KNOWN = ["orchestra", "choir", "stage", "lighting", "sound", "library", "production"]
 
-const defaultColor = "#6b7280"
-
-export function getDepartmentColor(department?: string): string {
-  return (department && departmentColors[department.toLowerCase()]) || defaultColor
+export function departmentColor(department?: string): string {
+  const key = department?.toLowerCase()
+  return key && KNOWN.includes(key) ? `var(--dept-${key})` : "var(--dept-default)"
 }

@@ -3,13 +3,15 @@ import EventItem from "./EventItem"
 
 export default function DayDetailView({ day }: { day: DayViewDto }) {
   return (
-    <div id="print-area" style={{ maxWidth: 900, margin: "0 auto" }}>
-      <h2 style={{ marginBottom: 20 }}>{day.title}</h2>
-
+    <div className="card day-view">
       {day.events.length === 0 ? (
-        <div className="muted">No events for this day</div>
+        <p className="empty">No events scheduled for this day.</p>
       ) : (
-        day.events.map(event => <EventItem key={event.id} event={event} showWeekLabel />)
+        <ul className="event-list" role="list">
+          {day.events.map(event => (
+            <EventItem key={event.id} event={event} headingLevel={2} />
+          ))}
+        </ul>
       )}
     </div>
   )

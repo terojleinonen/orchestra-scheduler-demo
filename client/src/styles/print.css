@@ -1,46 +1,57 @@
-/* Hide everything except print area */
 @media print {
-  body * {
-    visibility: hidden;
+  :root {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --surface-muted: #ffffff;
+    --text: #000000;
+    --text-secondary: #000000;
+    --text-muted: #333333;
+    --border: #999999;
+    --shadow: none;
   }
 
-  #print-area,
-  #print-area * {
-    visibility: visible;
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
   }
 
-  #print-area {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-  }
-
-  /* Remove buttons / UI */
-  button {
+  .skip-link,
+  .app-header,
+  .toolbar__nav,
+  .toolbar__filters,
+  .segmented,
+  .status-bar {
     display: none !important;
   }
 
-  /* Typography */
-  body {
-    font-family: Arial, sans-serif;
-    color: #000;
+  .app-main {
+    max-width: none;
+    padding: 0;
   }
 
-  h1, h2 {
-    margin-bottom: 10px;
+  .card {
+    box-shadow: none;
+    border: 0;
   }
 
-  /* Page breaks */
+  .toolbar {
+    padding: 0 0 0.5rem;
+  }
+
+  .day-section,
+  .event {
+    break-inside: avoid;
+  }
+
   .day-section {
-    page-break-inside: avoid;
-    margin-bottom: 20px;
+    padding: 0.5rem 0;
+    border-top: 1px solid #999999;
   }
 }
 
 @page {
   size: A4 portrait;
-  margin: 20mm;
+  margin: 15mm;
 
   @bottom-right {
     content: "Page " counter(page);

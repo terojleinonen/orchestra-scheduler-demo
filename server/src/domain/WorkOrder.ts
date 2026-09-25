@@ -9,6 +9,7 @@ export type WorkOrder = {
   workType?: string
   department?: string
   venue?: string
+  conductor?: string
 
   equipment: string[]
 }

@@ -1,11 +1,14 @@
-import { useEffect, useState } from "react"
-import type { ScheduleResponse, ViewMode } from "@orchestra/shared"
+import { useCallback, useEffect, useState } from "react"
+import type { ScheduleResponse } from "@orchestra/shared"
+import type { ScheduleParams } from "./useUrlState"
 
 // Fetches a ready-to-render schedule view. Without a date the server picks one.
-export function useSchedule(view: ViewMode, date?: string) {
+// The previous result stays available while the next one loads.
+export function useSchedule({ view, date, department }: ScheduleParams) {
   const [data, setData] = useState<ScheduleResponse | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [attempt, setAttempt] = useState(0)
 
   useEffect(() => {
     let cancelled = false
@@ -17,17 +20,18 @@ export function useSchedule(view: ViewMode, date?: string) {
 
         const params = new URLSearchParams({ view })
         if (date) params.set("date", date)
+        if (department) params.set("department", department)
 
         const res = await fetch(`/api/schedule?${params}`)
         if (!res.ok) {
-          throw new Error(`API error ${res.status}: ${await res.text()}`)
+          throw new Error(`The server responded with an error (${res.status}).`)
         }
 
         const json: ScheduleResponse = await res.json()
         if (!cancelled) setData(json)
       } catch (err) {
         if (!cancelled) {
-          setError(err instanceof Error ? err.message : "Failed to load schedule")
+          setError(err instanceof TypeError ? "Could not reach the schedule server." : String((err as Error).message))
         }
       } finally {
         if (!cancelled) setLoading(false)
@@ -39,7 +43,9 @@ export function useSchedule(view: ViewMode, date?: string) {
     return () => {
       cancelled = true
     }
-  }, [view, date])
+  }, [view, date, department, attempt])
 
-  return { data, loading, error }
+  const retry = useCallback(() => setAttempt(n => n + 1), [])
+
+  return { data, loading, error, retry }
 }
