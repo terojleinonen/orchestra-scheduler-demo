@@ -1,0 +1,11 @@
+{
+  "name": "@orchestra/shared",
+  "private": true,
+  "type": "module",
+  "types": "./src/schedule.ts",
+  "exports": {
+    ".": {
+      "types": "./src/schedule.ts"
+    }
+  }
+}

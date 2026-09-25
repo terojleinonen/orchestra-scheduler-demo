@@ -1,19 +1,11 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
-
 import SchedulePage from "./pages/SchedulePage"
 import "./styles/global.css"
+import "./styles/print.css"
 
 export default function App() {
   return (
-    <BrowserRouter>
-        <main className="appContent">
-          <Routes>
-            <Route
-              path="/"
-              element={<SchedulePage />}
-            />
-          </Routes>
-        </main>
-    </BrowserRouter>
+    <main className="appContent">
+      <SchedulePage />
+    </main>
   )
 }

@@ -41,21 +41,6 @@ body {
   box-shadow: var(--shadow-soft);
 }
 
-.surface-strong {
-  background: var(--bg-surface-strong);
-  border: 1px solid var(--border-strong);
-}
-
-.h1 {
-  font-size: 28px;
-  font-weight: 700;
-}
-
-.h2 {
-  font-size: 20px;
-  font-weight: 600;
-}
-
 .muted {
   color: var(--text-muted);
 }
@@ -136,50 +121,4 @@ body {
 .event-row:hover {
   background: var(--bg-surface-strong);
   border-radius: 8px;
-}
-
-.scheduler {
-  position: relative;
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-
-.event-block {
-  position: absolute;
-  border-radius: 8px;
-  background: linear-gradient(
-    180deg,
-    #3b82f6,
-    #1d4ed8
-  );
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: 0.15s ease;
-}
-
-.event-block:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 12px var(--accent-glow);
-}
-
-.scheduler {
-  position: relative;
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-
-.event-block {
-  position: absolute;
-  border-radius: 8px;
-  background: linear-gradient(
-    180deg,
-    #3b82f6,
-    #1d4ed8
-  );
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: 0.15s ease;
-}
-
-.event-block:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 12px var(--accent-glow);
 }

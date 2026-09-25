@@ -1,11 +1,8 @@
 import fs from "fs"
 import path from "path"
+import { fileURLToPath } from "url"
 
-type EventType = "rehearsal" | "concert" | "tour"
-
-function randomId() {
-  return Math.random().toString(36).substring(2, 10)
-}
+type EventType = "rehearsal" | "concert" | "setup"
 
 function getISOWeek(date: Date): number {
   const tmp = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()))
@@ -20,7 +17,7 @@ function getWeekdayISO(date: Date): number {
   return d === 0 ? 7 : d // convert Sun=0 → 7
 }
 
-function createEventXML(date: Date, type: string): string {
+function createEventXML(date: Date, type: EventType): string {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
   const weekNumber = getISOWeek(date)
@@ -37,7 +34,7 @@ function createEventXML(date: Date, type: string): string {
     type === "concert" ? 120 :
     120
 
-  const equipmentMap: Record<string, string[]> = {
+  const equipmentMap: Record<EventType, string[]> = {
     rehearsal: ["chairs", "music stands"],
     concert: ["lighting rig", "microphones", "chairs"],
     setup: ["stage platforms", "cables", "lights"]
@@ -116,8 +113,6 @@ export function generateFakeOpasXml(
 }
 
 // 👉 Run script
-import { fileURLToPath } from "url"
-
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
