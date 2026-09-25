@@ -6,7 +6,7 @@ export default function App() {
   return (
     <>
       <a className="skip-link" href="#schedule">
-        Skip to schedule
+        Siirry aikatauluun
       </a>
 
       <header className="app-header">
@@ -19,8 +19,8 @@ export default function App() {
             </svg>
           </span>
           <div>
-            <p className="app-header__title">Orchestra Scheduler</p>
-            <p className="app-header__tagline">Rehearsals, concerts and crew calls</p>
+            <p className="app-header__title">Orkesterin aikataulu</p>
+            <p className="app-header__tagline">Harjoitukset, konsertit ja tekniset työvuorot</p>
           </div>
         </div>
       </header>

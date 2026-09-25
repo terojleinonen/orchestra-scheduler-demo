@@ -54,8 +54,8 @@ Server: `http://localhost:4000`
 Client: `http://localhost:5173` (proxies `/api` to the server)
 
 Time zone defaults to `Europe/Helsinki`; override with `SCHEDULE_TZ`.
-Dates and times are formatted in Finnish (`LOCALE = "fi-FI"` in `server/src/config.ts`); the rest of the UI is English.
-Finnish date text is marked with `lang="fi"` so screen readers pronounce it correctly.
+The UI is in Finnish (`<html lang="fi">`). Dates and times use `LOCALE = "fi-FI"` in `server/src/config.ts`;
+other server-side texts (department and work type names, labels) are in `server/src/services/labels.ts`.
 
 ## API
 

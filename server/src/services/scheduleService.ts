@@ -9,7 +9,18 @@ import type {
   WeekViewDto
 } from "@orchestra/shared"
 import { type WorkOrder } from "../domain/WorkOrder"
-import { DATE_LANG } from "../config"
+import {
+  UNTITLED,
+  capitalize,
+  departmentLabel,
+  formatCount,
+  formatDuration,
+  nextLabel,
+  previousLabel,
+  weekLabel,
+  weeksLabel,
+  workTypeLabel
+} from "./labels"
 import {
   addDays,
   addMonths,
@@ -71,17 +82,6 @@ function getIndex(items: WorkOrder[]): ScheduleIndex {
 // Helpers
 // ==============================
 
-const capitalize = (s: string) => s[0].toUpperCase() + s.slice(1)
-
-const plural = (n: number, word: string) => `${n} ${word}${n === 1 ? "" : "s"}`
-
-// Finnish abbreviations: "2 t 30 min"
-function formatDuration(minutes: number) {
-  const h = Math.floor(minutes / 60)
-  const m = minutes % 60
-  return [h && `${h} t`, m && `${m} min`].filter(Boolean).join(" ") || "0 min"
-}
-
 // Weekday and date formatted separately to get "Perjantai 20. maaliskuuta 2026"
 // (with a year ICU would use the essive "perjantaina").
 function weekdayAndDate(d: string, options: Intl.DateTimeFormatOptions) {
@@ -96,14 +96,14 @@ function toEventDto(item: WorkOrder): EventDto {
 
   return {
     id: item.id,
-    title: item.title,
+    title: item.title ?? (item.workType ? workTypeLabel(item.workType) : UNTITLED),
     startAt: item.startAt,
     timeRange: `${formatTime(start)}–${formatTime(end)}`,
     duration: formatDuration(item.durationMinutes),
     production: item.production,
-    workType: item.workType && capitalize(item.workType),
+    workType: item.workType && workTypeLabel(item.workType),
     department: item.department,
-    departmentLabel: item.department && capitalize(item.department),
+    departmentLabel: item.department && departmentLabel(item.department),
     venue: item.venue,
     conductor: item.conductor,
     equipment: item.equipment
@@ -162,7 +162,7 @@ function buildMonthView({ date, today, eventsOn }: Context): ViewResult<MonthVie
 
   return {
     title: capitalize(formatDateKey(date, { month: "long", year: "numeric" })),
-    subtitle: `Weeks ${weeks[0].weekNumber}–${weeks[5].weekNumber}`,
+    subtitle: weeksLabel(weeks[0].weekNumber, weeks[5].weekNumber),
     eventCount,
     content: {
       view: "month",
@@ -191,7 +191,7 @@ function buildWeekView({ date, today, eventsOn }: Context): ViewResult<WeekViewD
 
   return {
     title: formatDateRange(monday, addDays(monday, 6), { day: "numeric", month: "long", year: "numeric" }),
-    subtitle: `Week ${isoWeek(date)}, ${isoWeekYear(date)}`,
+    subtitle: `${weekLabel(isoWeek(date))}, ${isoWeekYear(date)}`,
     eventCount: days.reduce((sum, d) => sum + d.events.length, 0),
     content: { view: "week", days }
   }
@@ -202,7 +202,7 @@ function buildDayView({ date, eventsOn }: Context): ViewResult<DayViewDto> {
 
   return {
     title: fullDate(date),
-    subtitle: `Week ${isoWeek(date)}`,
+    subtitle: weekLabel(isoWeek(date)),
     eventCount: events.length,
     content: { view: "day", events }
   }
@@ -243,10 +243,10 @@ function buildToolbar(index: ScheduleIndex, view: ViewMode, date: string, today:
   const weeks: NavOption[] = []
   for (const day of monthGrid(date)) {
     if (!sameMonth(day, date)) continue
-    const label = `Week ${isoWeek(day)}`
+    const label = weekLabel(isoWeek(day))
     if (!weeks.some(w => w.label === label)) weeks.push({ value: day, label })
   }
-  const currentWeek = `Week ${isoWeek(date)}`
+  const currentWeek = weekLabel(isoWeek(date))
 
   return {
     years,
@@ -255,9 +255,11 @@ function buildToolbar(index: ScheduleIndex, view: ViewMode, date: string, today:
     selectedMonth: startOfMonth(date),
     weeks,
     selectedWeek: weeks.find(w => w.label === currentWeek)?.value ?? "",
-    departments: index.departments.map(d => ({ value: d, label: capitalize(d) })),
-    previous: { value: STEP[view](date, -1), label: `Previous ${view}` },
-    next: { value: STEP[view](date, 1), label: `Next ${view}` },
+    departments: index.departments
+      .map(d => ({ value: d, label: departmentLabel(d) }))
+      .sort((a, b) => a.label.localeCompare(b.label, "fi")),
+    previous: { value: STEP[view](date, -1), label: previousLabel(view) },
+    next: { value: STEP[view](date, 1), label: nextLabel(view) },
     today
   }
 }
@@ -281,16 +283,15 @@ export function buildSchedule(
   }
 
   const { title, subtitle, eventCount, content } = viewBuilders[view]({ index, date, today, eventsOn })
-  const filter = department ? ` for ${capitalize(department)}` : ""
+  const filter = department ? ` (${departmentLabel(department)})` : ""
 
   return {
     view,
     date,
     department,
-    dateLang: DATE_LANG,
     title,
     subtitle,
-    countLabel: `${plural(eventCount, "event")}${filter}`,
+    countLabel: `${formatCount(eventCount)}${filter}`,
     toolbar: buildToolbar(index, view, date, today),
     content
   }

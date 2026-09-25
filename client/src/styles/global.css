@@ -619,6 +619,10 @@ select {
   .toolbar__nav-label {
     display: none;
   }
+
+  .toolbar__filters .field {
+    flex-basis: 100%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

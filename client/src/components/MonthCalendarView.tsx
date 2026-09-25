@@ -1,34 +1,32 @@
-import type { MonthViewDto } from "@orchestra/shared"
+import type { MonthViewDto, NavOption } from "@orchestra/shared"
 import { departmentColor } from "../utils/departmentTheme"
+import { formatCount } from "../utils/format"
 
 type Props = {
   month: MonthViewDto
   caption: string
-  lang: string
+  departments: NavOption[] // department keys and names, for the colour legend
   onSelectDate: (date: string) => void
 }
 
-const plural = (n: number) => `${n} ${n === 1 ? "event" : "events"}`
-
-export default function MonthCalendarView({ month, caption, lang, onSelectDate }: Props) {
-  const departments = [...new Set(month.weeks.flatMap(w => w.days.flatMap(d => d.departments)))].sort()
+export default function MonthCalendarView({ month, caption, departments, onSelectDate }: Props) {
+  const present = new Set(month.weeks.flatMap(w => w.days.flatMap(d => d.departments)))
+  const legend = departments.filter(d => present.has(d.value))
 
   return (
     <div className="card month">
       <table>
         <caption className="visually-hidden">
-          <span lang={lang}>{caption}</span>. Select a day to open its schedule.
+          {caption}. Valitse päivä nähdäksesi sen aikataulun.
         </caption>
         <thead>
           <tr>
             <th scope="col" className="month__week">
-              <abbr title="Week number">Wk</abbr>
+              <abbr title="Viikkonumero">Vk</abbr>
             </th>
             {month.weekdays.map(d => (
               <th key={d.long} scope="col">
-                <abbr title={d.long} lang={lang}>
-                  {d.short}
-                </abbr>
+                <abbr title={d.long}>{d.short}</abbr>
               </th>
             ))}
           </tr>
@@ -37,7 +35,7 @@ export default function MonthCalendarView({ month, caption, lang, onSelectDate }
           {month.weeks.map(week => (
             <tr key={week.days[0].date}>
               <th scope="row" className="month__week">
-                <span className="visually-hidden">Week </span>
+                <span className="visually-hidden">Viikko </span>
                 {week.weekNumber}
               </th>
 
@@ -58,13 +56,13 @@ export default function MonthCalendarView({ month, caption, lang, onSelectDate }
                       {day.dayOfMonth}
                     </span>
                     <span className="visually-hidden">
-                      <span lang={lang}>{day.label}</span>
-                      {day.isToday ? ", today" : ""}, {plural(day.eventCount)}
+                      {day.label}
+                      {day.isToday ? ", tänään" : ""}, {formatCount(day.eventCount)}
                     </span>
                     {day.eventCount > 0 && (
                       <span className="day-cell__count" aria-hidden="true">
                         {day.eventCount}
-                        <span className="day-cell__count-word"> {day.eventCount === 1 ? "event" : "events"}</span>
+                        <span className="day-cell__count-word"> {day.eventCount === 1 ? "tapahtuma" : "tapahtumaa"}</span>
                       </span>
                     )}
                     <span className="day-cell__dots">
@@ -80,12 +78,12 @@ export default function MonthCalendarView({ month, caption, lang, onSelectDate }
         </tbody>
       </table>
 
-      {departments.length > 0 && (
-        <ul className="legend" aria-label="Department colours">
-          {departments.map(d => (
-            <li key={d}>
-              <span className="dot" style={{ background: departmentColor(d) }} aria-hidden="true" />
-              <span style={{ textTransform: "capitalize" }}>{d}</span>
+      {legend.length > 0 && (
+        <ul className="legend" aria-label="Osastojen värit">
+          {legend.map(d => (
+            <li key={d.value}>
+              <span className="dot" style={{ background: departmentColor(d.value) }} aria-hidden="true" />
+              {d.label}
             </li>
           ))}
         </ul>

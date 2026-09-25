@@ -1,4 +1,5 @@
-// Generates a realistic fake OPAS XML export for an orchestra:
+// Generates a realistic fake OPAS XML export for an orchestra (texts in Finnish,
+// department and work type codes in English as in OPAS):
 // programme weeks with rehearsals, sectionals, dress rehearsals, concerts, choir calls,
 // technical crew calls (stage / lighting / sound), front of house, education work,
 // tours, recordings and a lighter summer season.
@@ -98,62 +99,62 @@ type Programme = {
 }
 
 const PROGRAMMES: Programme[] = [
-  { name: "Mahler: Symphony No. 5", conductor: "Susanna Mälkki" },
+  { name: "Mahler: Sinfonia nro 5", conductor: "Susanna Mälkki" },
   { name: "Sibelius: Kullervo", conductor: "Hannu Lintu", choir: true },
-  { name: "Beethoven: Symphony No. 9", conductor: "Esa-Pekka Salonen", choir: true },
-  { name: "Brahms: A German Requiem", conductor: "Dalia Stasevska", choir: true },
-  { name: "Sibelius: Symphonies 5 & 7", conductor: "Klaus Mäkelä" },
-  { name: "Tchaikovsky: Violin Concerto", conductor: "Santtu-Matias Rouvali", soloist: "Elina Vähälä" },
-  { name: "Rachmaninoff: Piano Concerto No. 3", conductor: "Jukka-Pekka Saraste", soloist: "Olli Mustonen" },
-  { name: "Shostakovich: Symphony No. 7", conductor: "Hannu Lintu" },
+  { name: "Beethoven: Sinfonia nro 9", conductor: "Esa-Pekka Salonen", choir: true },
+  { name: "Brahms: Saksalainen requiem", conductor: "Dalia Stasevska", choir: true },
+  { name: "Sibelius: Sinfoniat 5 ja 7", conductor: "Klaus Mäkelä" },
+  { name: "Tšaikovski: Viulukonsertto", conductor: "Santtu-Matias Rouvali", soloist: "Elina Vähälä" },
+  { name: "Rahmaninov: Pianokonsertto nro 3", conductor: "Jukka-Pekka Saraste", soloist: "Olli Mustonen" },
+  { name: "Šostakovitš: Sinfonia nro 7", conductor: "Hannu Lintu" },
   { name: "Mozart: Requiem", conductor: "Eva Ollikainen", choir: true },
-  { name: "Stravinsky: The Rite of Spring", conductor: "Klaus Mäkelä" },
-  { name: "Dvořák: Symphony No. 9", conductor: "Dalia Stasevska" },
-  { name: "Saariaho: Orion & Debussy: La Mer", conductor: "Susanna Mälkki" },
-  { name: "Bruckner: Symphony No. 7", conductor: "Jukka-Pekka Saraste" },
+  { name: "Stravinsky: Kevätuhri", conductor: "Klaus Mäkelä" },
+  { name: "Dvořák: Sinfonia nro 9", conductor: "Dalia Stasevska" },
+  { name: "Saariaho: Orion ja Debussy: Meri", conductor: "Susanna Mälkki" },
+  { name: "Bruckner: Sinfonia nro 7", conductor: "Jukka-Pekka Saraste" },
   { name: "Verdi: Messa da Requiem", conductor: "Esa-Pekka Salonen", choir: true },
-  { name: "Ravel: Daphnis et Chloé", conductor: "Santtu-Matias Rouvali", choir: true },
-  { name: "Elgar: Cello Concerto", conductor: "Eva Ollikainen", soloist: "Senja Rummukainen" },
-  { name: "Holst: The Planets", conductor: "Dalia Stasevska", choir: true },
-  { name: "Bartók: Concerto for Orchestra", conductor: "Hannu Lintu" },
-  { name: "Family Concert: Peter and the Wolf", conductor: "Eva Ollikainen", family: true },
-  { name: "Family Concert: The Snowman", conductor: "Dalia Stasevska", family: true },
-  { name: "Film Night: Music of John Williams", conductor: "Santtu-Matias Rouvali" },
+  { name: "Ravel: Daphnis ja Chloé", conductor: "Santtu-Matias Rouvali", choir: true },
+  { name: "Elgar: Sellokonsertto", conductor: "Eva Ollikainen", soloist: "Senja Rummukainen" },
+  { name: "Holst: Planeetat", conductor: "Dalia Stasevska", choir: true },
+  { name: "Bartók: Konsertto orkesterille", conductor: "Hannu Lintu" },
+  { name: "Perhekonsertti: Pekka ja susi", conductor: "Eva Ollikainen", family: true },
+  { name: "Perhekonsertti: Lumiukko", conductor: "Dalia Stasevska", family: true },
+  { name: "Elokuvailta: John Williamsin musiikkia", conductor: "Santtu-Matias Rouvali" },
   { name: "Rautavaara: Cantus Arcticus", conductor: "Susanna Mälkki" }
 ]
 
 const GALAS: Record<string, Programme> = {
-  "12": { name: "Christmas Concert", conductor: "Dalia Stasevska", choir: true, family: true },
-  "1": { name: "New Year Gala", conductor: "Klaus Mäkelä", soloist: "Karita Mattila" }
+  "12": { name: "Joulukonsertti", conductor: "Dalia Stasevska", choir: true, family: true },
+  "1": { name: "Uudenvuoden gaala", conductor: "Klaus Mäkelä", soloist: "Karita Mattila" }
 }
 
 const SUMMER_PROGRAMMES: Programme[] = [
-  { name: "Summer Festival: Open-Air Classics", conductor: "Santtu-Matias Rouvali" },
-  { name: "Summer Festival: Chamber Serenades", conductor: "Eva Ollikainen" }
+  { name: "Kesäfestivaali: Klassikot ulkoilmassa", conductor: "Santtu-Matias Rouvali" },
+  { name: "Kesäfestivaali: Kamariserenadeja", conductor: "Eva Ollikainen" }
 ]
 
-const TOUR_VENUES = ["Tampere Hall", "Turku Concert Hall", "Sibelius Hall, Lahti", "Oulu Music Centre"]
-const SECTIONS = ["Strings", "Woodwinds", "Brass", "Percussion"]
-const CHAMBER = ["String Quartet Matinee", "Wind Quintet Recital", "Brass Ensemble", "Piano Trio Afternoon"]
+const TOUR_VENUES = ["Tampere-talo", "Turun konserttitalo", "Sibeliustalo, Lahti", "Oulun musiikkikeskus"]
+const SECTIONS = ["Jouset", "Puupuhaltimet", "Vaskipuhaltimet", "Lyömäsoittimet"]
+const CHAMBER = ["Jousikvartettimatinea", "Puhallinkvintettikonsertti", "Vaskiyhtye", "Pianotrioiltapäivä"]
 
 const EQUIPMENT: Record<string, string[]> = {
-  rehearsal: ["chairs", "music stands", "stand lights"],
-  sectional: ["chairs", "music stands"],
-  "dress rehearsal": ["chairs", "music stands", "risers", "concert lighting"],
-  concert: ["chairs", "music stands", "risers", "concert lighting", "microphones"],
-  "choir rehearsal": ["choir risers", "piano"],
-  setup: ["stage platforms", "risers", "cables"],
-  "lighting focus": ["lighting rig", "lift"],
-  "sound check": ["microphones", "mixing desk", "monitors"],
-  "load-out": ["flight cases", "truck"],
-  "front of house": ["ticket scanners", "programme booklets"],
-  recording: ["microphones", "recording desk", "headphones"],
-  workshop: ["chairs", "percussion kit"],
-  travel: ["coach", "instrument truck"],
-  maintenance: ["tools"],
-  meeting: ["projector"],
-  "crew call": ["chairs", "music stands", "stand lights"],
-  library: ["scores", "orchestral parts"]
+  rehearsal: ["tuolit", "nuottitelineet", "telinevalot"],
+  sectional: ["tuolit", "nuottitelineet"],
+  "dress rehearsal": ["tuolit", "nuottitelineet", "korokkeet", "konserttivalaistus"],
+  concert: ["tuolit", "nuottitelineet", "korokkeet", "konserttivalaistus", "mikrofonit"],
+  "choir rehearsal": ["kuorokorokkeet", "piano"],
+  setup: ["lavaelementit", "korokkeet", "kaapelit"],
+  "lighting focus": ["valorigi", "henkilönostin"],
+  "sound check": ["mikrofonit", "mikseri", "monitorit"],
+  "load-out": ["kuljetuslaatikot", "kuorma-auto"],
+  "front of house": ["lipunlukijat", "käsiohjelmat"],
+  recording: ["mikrofonit", "äänityspöytä", "kuulokkeet"],
+  workshop: ["tuolit", "lyömäsoittimet"],
+  travel: ["linja-auto", "soitinkuljetus"],
+  maintenance: ["työkalut"],
+  meeting: ["projektori"],
+  "crew call": ["tuolit", "nuottitelineet", "telinevalot"],
+  library: ["partituurit", "orkesteristemmat"]
 }
 
 // ==============================
@@ -183,22 +184,22 @@ function planProgrammeWeek(monday: Day, programme: Programme) {
   const production = programme.name
   const conductor = programme.conductor
   const touring = !programme.family && chance(0.08)
-  const concertVenue = touring ? pick(TOUR_VENUES) : "Main Hall"
+  const concertVenue = touring ? pick(TOUR_VENUES) : "Pääsali"
   const concertDays = programme.family ? [6] : chance(0.5) ? [4, 5] : [5, 6]
   const firstConcert = concertDays[0]
 
-  add({ day: on(1), start: [9, 0], minutes: 60, title: "Weekly production meeting", workType: "meeting", department: "production", venue: "Meeting Room", production })
-  add({ day: on(1), start: [8, 0], minutes: 120, title: `Distribute parts — ${production}`, workType: "library", department: "library", venue: "Music Library", production })
+  add({ day: on(1), start: [9, 0], minutes: 60, title: "Viikkopalaveri", workType: "meeting", department: "production", venue: "Neuvotteluhuone", production })
+  add({ day: on(1), start: [8, 0], minutes: 120, title: `Stemmojen jako — ${production}`, workType: "library", department: "library", venue: "Nuotisto", production })
 
   for (let weekday = 1; weekday < firstConcert; weekday++) {
     const isDress = weekday === firstConcert - 1
-    const rehearsalVenue = isDress ? "Main Hall" : pick(["Rehearsal Hall A", "Main Hall"])
-    add({ day: on(weekday), start: [9, 15], minutes: 45, title: "Stage crew call — seating plan", workType: "crew call", department: "stage", venue: rehearsalVenue, production })
+    const rehearsalVenue = isDress ? "Pääsali" : pick(["Harjoitussali A", "Pääsali"])
+    add({ day: on(weekday), start: [9, 15], minutes: 45, title: "Näyttämötyövuoro — istumajärjestys", workType: "crew call", department: "stage", venue: rehearsalVenue, production })
     add({
       day: on(weekday),
       start: [10, 0],
       minutes: isDress ? 180 : 150,
-      title: isDress ? `Dress rehearsal — ${production}` : `Orchestra rehearsal — ${production}`,
+      title: isDress ? `Kenraaliharjoitus — ${production}` : `Orkesteriharjoitus — ${production}`,
       workType: isDress ? "dress rehearsal" : "rehearsal",
       department: "orchestra",
       venue: rehearsalVenue,
@@ -208,26 +209,26 @@ function planProgrammeWeek(monday: Day, programme: Programme) {
 
     if (!isDress && chance(0.45)) {
       const section = pick(SECTIONS)
-      add({ day: on(weekday), start: [14, 0], minutes: 120, title: `${section} sectional`, workType: "sectional", department: "orchestra", venue: "Rehearsal Hall B", production })
+      add({ day: on(weekday), start: [14, 0], minutes: 120, title: `Stemmaharjoitus: ${section.toLowerCase()}`, workType: "sectional", department: "orchestra", venue: "Harjoitussali B", production })
     }
 
     if (programme.soloist && weekday === firstConcert - 2) {
-      add({ day: on(weekday), start: [14, 30], minutes: 90, title: `Soloist rehearsal with ${programme.soloist}`, workType: "rehearsal", department: "orchestra", venue: "Main Hall", production, conductor })
+      add({ day: on(weekday), start: [14, 30], minutes: 90, title: `Solistiharjoitus: ${programme.soloist}`, workType: "rehearsal", department: "orchestra", venue: "Pääsali", production, conductor })
     }
 
     if (programme.choir) {
-      add({ day: on(weekday), start: [18, 0], minutes: 150, title: `Choir rehearsal — ${production}`, workType: "choir rehearsal", department: "choir", venue: "Choir Studio", production })
+      add({ day: on(weekday), start: [18, 0], minutes: 150, title: `Kuoroharjoitus — ${production}`, workType: "choir rehearsal", department: "choir", venue: "Kuorostudio", production })
     }
   }
 
   // Technical preparation on the day before the first concert
   const techDay = on(Math.max(1, firstConcert - 1))
-  add({ day: techDay, start: [7, 30], minutes: 150, title: "Stage setup and risers", workType: "setup", department: "stage", venue: "Main Hall", production })
-  add({ day: techDay, start: [13, 30], minutes: 180, title: "Lighting focus", workType: "lighting focus", department: "lighting", venue: "Main Hall", production })
-  add({ day: techDay, start: [16, 30], minutes: 90, title: "Sound check and microphone plot", workType: "sound check", department: "sound", venue: "Main Hall", production })
+  add({ day: techDay, start: [7, 30], minutes: 150, title: "Näyttämön ja korokkeiden rakennus", workType: "setup", department: "stage", venue: "Pääsali", production })
+  add({ day: techDay, start: [13, 30], minutes: 180, title: "Valojen suuntaus", workType: "lighting focus", department: "lighting", venue: "Pääsali", production })
+  add({ day: techDay, start: [16, 30], minutes: 90, title: "Äänitarkistus ja mikrofonien sijoittelu", workType: "sound check", department: "sound", venue: "Pääsali", production })
 
   if (touring) {
-    add({ day: on(firstConcert), start: [8, 0], minutes: 240, title: `Travel to ${concertVenue}`, workType: "travel", department: "production", venue: concertVenue, production })
+    add({ day: on(firstConcert), start: [8, 0], minutes: 240, title: `Matka: ${concertVenue}`, workType: "travel", department: "production", venue: concertVenue, production })
   }
 
   for (const weekday of concertDays) {
@@ -235,38 +236,38 @@ function planProgrammeWeek(monday: Day, programme: Programme) {
     const [h, m]: [number, number] = matinee ? [14, 0] : [19, 0]
     const venue = concertVenue
 
-    add({ day: on(weekday), start: [h - 1, 30], minutes: 30, title: "Concert warm-up and tuning", workType: "rehearsal", department: "orchestra", venue, production })
-    add({ day: on(weekday), start: [h - 1, 0], minutes: 180, title: "Front of house", workType: "front of house", department: "production", venue, production })
-    add({ day: on(weekday), start: [h - 2, 0], minutes: 60, title: "Lighting preset check", workType: "lighting focus", department: "lighting", venue, production })
-    add({ day: on(weekday), start: [h - 2, 30], minutes: 60, title: "Line check", workType: "sound check", department: "sound", venue, production })
-    add({ day: on(weekday), start: [h, m], minutes: matinee ? 75 : 120, title: `Concert — ${production}`, workType: "concert", department: "orchestra", venue, production, conductor })
+    add({ day: on(weekday), start: [h - 1, 30], minutes: 30, title: "Lämmittely ja viritys", workType: "rehearsal", department: "orchestra", venue, production })
+    add({ day: on(weekday), start: [h - 1, 0], minutes: 180, title: "Yleisöpalvelu", workType: "front of house", department: "production", venue, production })
+    add({ day: on(weekday), start: [h - 2, 0], minutes: 60, title: "Valojen esiasetusten tarkistus", workType: "lighting focus", department: "lighting", venue, production })
+    add({ day: on(weekday), start: [h - 2, 30], minutes: 60, title: "Linjatarkistus", workType: "sound check", department: "sound", venue, production })
+    add({ day: on(weekday), start: [h, m], minutes: matinee ? 75 : 120, title: `Konsertti — ${production}`, workType: "concert", department: "orchestra", venue, production, conductor })
     if (programme.choir) {
-      add({ day: on(weekday), start: [h, m], minutes: matinee ? 75 : 120, title: `Choir performs — ${production}`, workType: "concert", department: "choir", venue, production, conductor })
+      add({ day: on(weekday), start: [h, m], minutes: matinee ? 75 : 120, title: `Kuoro esiintyy — ${production}`, workType: "concert", department: "choir", venue, production, conductor })
     }
   }
 
   const last = concertDays[concertDays.length - 1]
-  add({ day: on(last), start: [matineeEnd(programme), 30], minutes: 120, title: "Load-out and changeover", workType: "load-out", department: "stage", venue: concertVenue, production })
+  add({ day: on(last), start: [matineeEnd(programme), 30], minutes: 120, title: "Purku ja vaihto", workType: "load-out", department: "stage", venue: concertVenue, production })
 
-  add({ day: on(last), start: [13, 0], minutes: 120, title: "Collect and check parts", workType: "library", department: "library", venue: "Music Library", production })
+  add({ day: on(last), start: [13, 0], minutes: 120, title: "Stemmojen keräys ja tarkistus", workType: "library", department: "library", venue: "Nuotisto", production })
 
   if (chance(0.3)) {
-    add({ day: on(last + 1), start: [15, 0], minutes: 60, title: pick(CHAMBER), workType: "concert", department: "orchestra", venue: "Chamber Hall", production: "Chamber Series" })
+    add({ day: on(last + 1), start: [15, 0], minutes: 60, title: pick(CHAMBER), workType: "concert", department: "orchestra", venue: "Kamarimusiikkisali", production: "Kamarimusiikkisarja" })
   }
 
   if (chance(0.25)) {
-    add({ day: on(firstConcert), start: [10, 0], minutes: 180, title: `Recording session — ${production}`, workType: "recording", department: "sound", venue: "Main Hall", production })
+    add({ day: on(firstConcert), start: [10, 0], minutes: 180, title: `Äänitys — ${production}`, workType: "recording", department: "sound", venue: "Pääsali", production })
   }
 
   if (chance(0.35)) {
-    add({ day: on(pick([2, 3])), start: [9, 30], minutes: 90, title: "School workshop", workType: "workshop", department: "production", venue: "Foyer", production: "Education Programme" })
+    add({ day: on(pick([2, 3])), start: [9, 30], minutes: 90, title: "Koulutyöpaja", workType: "workshop", department: "production", venue: "Lämpiö", production: "Yleisötyö" })
   }
 
   // Routine technical maintenance on non-concert weekdays
   for (let weekday = 1; weekday <= 5; weekday++) {
     if (concertDays.includes(weekday)) continue
     if (chance(0.5)) {
-      add({ day: on(weekday), start: [8, 0], minutes: 60, title: pick(["Piano tuning", "Stage maintenance", "Lighting maintenance", "Audio system check"]), workType: "maintenance", department: pick(["stage", "lighting", "sound"] as const), venue: "Main Hall" })
+      add({ day: on(weekday), start: [8, 0], minutes: 60, title: pick(["Pianon viritys", "Näyttämön huolto", "Valojen huolto", "Äänentoiston tarkistus"]), workType: "maintenance", department: pick(["stage", "lighting", "sound"] as const), venue: "Pääsali" })
     }
   }
 }
@@ -280,11 +281,11 @@ function planSummerWeek(monday: Day) {
   const programme = pick(SUMMER_PROGRAMMES)
   const production = programme.name
 
-  add({ day: on(2), start: [10, 0], minutes: 150, title: `Orchestra rehearsal — ${production}`, workType: "rehearsal", department: "orchestra", venue: "Rehearsal Hall A", production, conductor: programme.conductor })
-  add({ day: on(3), start: [9, 0], minutes: 240, title: "Open-air stage build", workType: "setup", department: "stage", venue: "Park Stage", production })
-  add({ day: on(3), start: [15, 0], minutes: 120, title: "Sound check and microphone plot", workType: "sound check", department: "sound", venue: "Park Stage", production })
-  add({ day: on(4), start: [19, 0], minutes: 90, title: `Concert — ${production}`, workType: "concert", department: "orchestra", venue: "Park Stage", production, conductor: programme.conductor })
-  add({ day: on(4), start: [21, 0], minutes: 120, title: "Load-out and changeover", workType: "load-out", department: "stage", venue: "Park Stage", production })
+  add({ day: on(2), start: [10, 0], minutes: 150, title: `Orkesteriharjoitus — ${production}`, workType: "rehearsal", department: "orchestra", venue: "Harjoitussali A", production, conductor: programme.conductor })
+  add({ day: on(3), start: [9, 0], minutes: 240, title: "Ulkolavan rakennus", workType: "setup", department: "stage", venue: "Puistolava", production })
+  add({ day: on(3), start: [15, 0], minutes: 120, title: "Äänitarkistus ja mikrofonien sijoittelu", workType: "sound check", department: "sound", venue: "Puistolava", production })
+  add({ day: on(4), start: [19, 0], minutes: 90, title: `Konsertti — ${production}`, workType: "concert", department: "orchestra", venue: "Puistolava", production, conductor: programme.conductor })
+  add({ day: on(4), start: [21, 0], minutes: 120, title: "Purku ja vaihto", workType: "load-out", department: "stage", venue: "Puistolava", production })
 }
 
 // ==============================

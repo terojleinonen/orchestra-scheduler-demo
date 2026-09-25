@@ -21,7 +21,7 @@ export default function SchedulePage() {
 
   useEffect(() => {
     if (!data) return
-    document.title = `${data.title} – Orchestra Scheduler`
+    document.title = `${data.title} – Orkesterin aikataulu`
 
     // When the control the user activated disappears (e.g. a month day), move focus to the new view.
     if (focusHeadingOnLoad.current) {
@@ -35,12 +35,12 @@ export default function SchedulePage() {
       <div className="alert" role="alert">
         <span>{error}</span>
         <button className="btn" onClick={retry}>
-          Try again
+          Yritä uudelleen
         </button>
       </div>
     ) : (
       <p className="placeholder" role="status">
-        Loading schedule…
+        Ladataan aikataulua…
       </p>
     )
   }
@@ -66,21 +66,21 @@ export default function SchedulePage() {
         {/* Announces every completed update to screen reader users */}
         <p className="visually-hidden" role="status" aria-live="polite">
           {loading ? (
-            "Loading…"
+            "Ladataan…"
           ) : (
             <>
-              <span lang={data.dateLang}>{data.title}</span>, {data.subtitle}: {data.countLabel}.
+              {data.title}, {data.subtitle}: {data.countLabel}.
             </>
           )}
         </p>
-        {loading && <p aria-hidden="true">Updating…</p>}
+        {loading && <p aria-hidden="true">Päivitetään…</p>}
       </div>
 
       {error && (
         <div className="alert" role="alert" style={{ marginBottom: "1rem" }}>
           <span>{error}</span>
           <button className="btn" onClick={retry}>
-            Try again
+            Yritä uudelleen
           </button>
         </div>
       )}
@@ -91,7 +91,7 @@ export default function SchedulePage() {
             <MonthCalendarView
               month={content}
               caption={data.title}
-              lang={data.dateLang}
+              departments={data.toolbar.departments}
               onSelectDate={d => {
                 focusHeadingOnLoad.current = true
                 setParams({ date: d, view: "day" })
@@ -99,9 +99,9 @@ export default function SchedulePage() {
             />
           )}
 
-          {content.view === "week" && <WeekListView week={content} lang={data.dateLang} />}
+          {content.view === "week" && <WeekListView week={content} />}
 
-          {content.view === "day" && <DayDetailView day={content} lang={data.dateLang} />}
+          {content.view === "day" && <DayDetailView day={content} />}
         </div>
       </div>
     </>

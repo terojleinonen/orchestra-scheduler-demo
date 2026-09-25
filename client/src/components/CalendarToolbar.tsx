@@ -1,7 +1,11 @@
 import { useId, type RefObject } from "react"
 import type { NavOption, ScheduleResponse, ViewMode } from "@orchestra/shared"
 
-const VIEWS: ViewMode[] = ["month", "week", "day"]
+const VIEWS: { value: ViewMode; label: string }[] = [
+  { value: "month", label: "Kuukausi" },
+  { value: "week", label: "Viikko" },
+  { value: "day", label: "Päivä" }
+]
 
 type Props = {
   data: ScheduleResponse
@@ -17,15 +21,13 @@ function Select({
   value,
   options,
   onChange,
-  allLabel,
-  optionLang
+  allLabel
 }: {
   label: string
   value: string
   options: NavOption[]
   onChange: (value: string) => void
   allLabel?: string
-  optionLang?: string
 }) {
   const id = useId()
 
@@ -35,7 +37,7 @@ function Select({
       <select id={id} value={value} onChange={e => onChange(e.target.value)}>
         {allLabel !== undefined && <option value="">{allLabel}</option>}
         {options.map(o => (
-          <option key={o.value} value={o.value} lang={optionLang}>
+          <option key={o.value} value={o.value}>
             {o.label}
           </option>
         ))}
@@ -57,52 +59,51 @@ export default function CalendarToolbar({
   return (
     <section className="card toolbar" aria-labelledby="view-title">
       <div className="toolbar__row">
-        <nav className="toolbar__nav" aria-label="Date navigation">
+        <nav className="toolbar__nav" aria-label="Ajankohdan valinta">
           <button className="btn" onClick={() => onNavigate(toolbar.previous.value)} aria-label={toolbar.previous.label}>
             <span aria-hidden="true">←</span>
-            <span className="toolbar__nav-label">Previous</span>
+            <span className="toolbar__nav-label">Edellinen</span>
           </button>
           <button className="btn" onClick={() => onNavigate(toolbar.today)}>
-            Today
+            Tänään
           </button>
           <button className="btn" onClick={() => onNavigate(toolbar.next.value)} aria-label={toolbar.next.label}>
-            <span className="toolbar__nav-label">Next</span>
+            <span className="toolbar__nav-label">Seuraava</span>
             <span aria-hidden="true">→</span>
           </button>
         </nav>
 
         <div className="toolbar__heading">
-          <h1 id="view-title" className="toolbar__title" ref={headingRef} tabIndex={-1} lang={data.dateLang}>
+          <h1 id="view-title" className="toolbar__title" ref={headingRef} tabIndex={-1}>
             {data.title}
           </h1>
           <p className="toolbar__subtitle">{data.subtitle}</p>
         </div>
 
-        <div className="segmented" role="group" aria-label="View">
+        <div className="segmented" role="group" aria-label="Näkymä">
           {VIEWS.map(v => (
-            <button key={v} className="btn" aria-pressed={v === view} onClick={() => onViewChange(v)}>
-              {v}
+            <button key={v.value} className="btn" aria-pressed={v.value === view} onClick={() => onViewChange(v.value)}>
+              {v.label}
             </button>
           ))}
         </div>
       </div>
 
-      <div className="toolbar__filters" role="group" aria-label="Filters">
-        <Select label="Year" value={toolbar.selectedYear} options={toolbar.years} onChange={onNavigate} />
+      <div className="toolbar__filters" role="group" aria-label="Suodattimet">
+        <Select label="Vuosi" value={toolbar.selectedYear} options={toolbar.years} onChange={onNavigate} />
         <Select
-          label="Month"
+          label="Kuukausi"
           value={toolbar.selectedMonth}
           options={toolbar.months}
           onChange={onNavigate}
-          optionLang={data.dateLang}
         />
-        <Select label="Week" value={toolbar.selectedWeek} options={toolbar.weeks} onChange={onWeekChange} />
+        <Select label="Viikko" value={toolbar.selectedWeek} options={toolbar.weeks} onChange={onWeekChange} />
         <Select
-          label="Department"
+          label="Osasto"
           value={data.department}
           options={toolbar.departments}
           onChange={onDepartmentChange}
-          allLabel="All departments"
+          allLabel="Kaikki osastot"
         />
 
         <button className="btn" onClick={() => window.print()}>
@@ -111,7 +112,7 @@ export default function CalendarToolbar({
             <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
             <path d="M6 14h12v8H6z" />
           </svg>
-          Print
+          Tulosta
         </button>
       </div>
     </section>

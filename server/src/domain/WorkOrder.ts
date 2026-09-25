@@ -1,7 +1,7 @@
 export type WorkOrder = {
   id: string
 
-  title: string
+  title?: string
   startAt: string // ISO timestamp
   durationMinutes: number
 

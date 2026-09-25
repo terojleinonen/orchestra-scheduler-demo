@@ -24,14 +24,14 @@ export function useSchedule({ view, date, department }: ScheduleParams) {
 
         const res = await fetch(`/api/schedule?${params}`)
         if (!res.ok) {
-          throw new Error(`The server responded with an error (${res.status}).`)
+          throw new Error(`Palvelin palautti virheen (${res.status}).`)
         }
 
         const json: ScheduleResponse = await res.json()
         if (!cancelled) setData(json)
       } catch (err) {
         if (!cancelled) {
-          setError(err instanceof TypeError ? "Could not reach the schedule server." : String((err as Error).message))
+          setError(err instanceof TypeError ? "Aikataulupalvelimeen ei saatu yhteyttä." : String((err as Error).message))
         }
       } finally {
         if (!cancelled) setLoading(false)

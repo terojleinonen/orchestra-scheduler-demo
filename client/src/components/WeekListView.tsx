@@ -1,7 +1,8 @@
 import type { WeekViewDto } from "@orchestra/shared"
 import EventItem from "./EventItem"
+import { formatCount } from "../utils/format"
 
-export default function WeekListView({ week, lang }: { week: WeekViewDto; lang: string }) {
+export default function WeekListView({ week }: { week: WeekViewDto }) {
   return (
     <div className="week">
       {week.days.map(day => {
@@ -10,21 +11,21 @@ export default function WeekListView({ week, lang }: { week: WeekViewDto; lang: 
         return (
           <section key={day.date} className="card day-section" aria-labelledby={headingId}>
             <div className="day-section__header">
-              <h2 id={headingId} className="day-section__title" lang={lang}>
+              <h2 id={headingId} className="day-section__title">
                 {day.label}
               </h2>
-              {day.isToday && <span className="badge">Today</span>}
+              {day.isToday && <span className="badge">Tänään</span>}
               <span className="day-section__count">
-                {day.events.length} {day.events.length === 1 ? "event" : "events"}
+                {formatCount(day.events.length)}
               </span>
             </div>
 
             {day.events.length === 0 ? (
-              <p className="empty">No events scheduled.</p>
+              <p className="empty">Ei tapahtumia.</p>
             ) : (
               <ul className="event-list" role="list">
                 {day.events.map(event => (
-                  <EventItem key={event.id} event={event} headingLevel={3} lang={lang} />
+                  <EventItem key={event.id} event={event} headingLevel={3} />
                 ))}
               </ul>
             )}
